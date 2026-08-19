@@ -62,21 +62,25 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 1rem;
+  --background: oklch(0.976 0.004 264);
+  --foreground: oklch(0.185 0.035 264.695);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.185 0.035 264.695);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.185 0.035 264.695);
+  --primary: oklch(0.505 0.219 263.5);
+  --primary-foreground: oklch(0.99 0.003 247.858);
+  --secondary: oklch(0.955 0.012 255);
+  --secondary-foreground: oklch(0.28 0.05 264);
+  --muted: oklch(0.962 0.008 250);
+  --muted-foreground: oklch(0.545 0.032 257.417);
+  --accent: oklch(0.945 0.028 258);
+  --accent-foreground: oklch(0.35 0.14 263.5);
+  --brand-ink: oklch(0.16 0.02 264);
+  --gradient-cta: linear-gradient(100deg, oklch(0.42 0.2 263.5), oklch(0.56 0.21 258));
+  --shadow-card: 0 1px 2px oklch(0.2 0.05 264 / 0.04), 0 8px 24px -12px oklch(0.2 0.05 264 / 0.12);
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
