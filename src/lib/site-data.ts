@@ -9,9 +9,9 @@ export const BRAND = {
   location: "London, United Kingdom",
   locationFlag: "🇬🇧",
   responseTime: "Less than 1 hour",
-  whatsapp: "+1 (331) 278-2900",
-  whatsappUrl: "https://wa.me/13312782900",
-  email: "info@heseven.com",
+  whatsapp: "+44 7454 744906",
+  whatsappUrl: "https://wa.me/447454744906",
+  email: "heseven.pro@gmail.com",
 };
 
 export const SUPPORTED_LOCATIONS = [
@@ -115,7 +115,6 @@ export const NAV = [
   { label: "Portfolio", to: "/portfolio" },
   { label: "Services", to: "/services" },
   { label: "About Us", to: "/about" },
-  { label: "Team", to: "/team" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
