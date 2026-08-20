@@ -93,18 +93,43 @@ function ProfileCard() {
 
       <dl className="mt-6 space-y-3 text-left text-sm">
         <div>
-          <dt className="text-muted-foreground">Serving</dt>
-          <dd className="font-medium text-brand-ink">{BRAND.serving}</dd>
+          <dt className="text-muted-foreground">Primary location</dt>
+          <dd className="font-medium text-brand-ink">
+            {BRAND.locationFlag} {BRAND.location}
+          </dd>
+        </div>
+        <div>
+          <dt className="text-muted-foreground">Supported locations</dt>
+          <dd className="font-medium text-brand-ink">
+            {(showLocations ? SUPPORTED_LOCATIONS : SUPPORTED_LOCATIONS.slice(0, 3)).join(", ")}
+          </dd>
+          <button
+            type="button"
+            onClick={() => setShowLocations((v) => !v)}
+            className="mt-1 text-xs font-semibold text-primary hover:underline"
+          >
+            {showLocations ? "Show less" : `View more (${SUPPORTED_LOCATIONS.length - 3})`}
+          </button>
         </div>
         <div>
           <dt className="text-muted-foreground">Languages</dt>
-          <dd className="font-medium text-brand-ink">{BRAND.languages}</dd>
+          <dd className="font-medium text-brand-ink">
+            {(showLanguages ? LANGUAGES : LANGUAGES.slice(0, 3)).join(", ")}
+          </dd>
+          <button
+            type="button"
+            onClick={() => setShowLanguages((v) => !v)}
+            className="mt-1 text-xs font-semibold text-primary hover:underline"
+          >
+            {showLanguages ? "Fewer languages" : `More languages (${LANGUAGES.length - 3})`}
+          </button>
         </div>
         <div>
           <dt className="text-muted-foreground">Average response time</dt>
           <dd className="font-medium text-brand-ink">{BRAND.responseTime}</dd>
         </div>
       </dl>
+
 
       <div className="mt-6 space-y-3">
         <Link
