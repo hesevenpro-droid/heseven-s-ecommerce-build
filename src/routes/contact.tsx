@@ -32,8 +32,8 @@ function Contact() {
   return (
     <SiteLayout>
       <Panel
-        title="Get In Touch"
-        subtitle="Before starting a project with any of our experts, talk to our team. We will answer your questions and point you to the right solution for your store."
+        title="We're Here to Help You Succeed"
+        subtitle="Ready to elevate your e-commerce business? Whether you need a new website, a redesign, or custom development services, we're here to assist you. Fill out the form below or email us directly, and our team will get back to you with a tailored solution to meet your needs."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           <a
