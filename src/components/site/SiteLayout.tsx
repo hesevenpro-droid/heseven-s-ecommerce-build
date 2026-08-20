@@ -17,10 +17,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-3 px-4 py-10">
-          <ShopifyBag />
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-10">
           <span className="text-3xl font-bold tracking-tight text-brand-ink sm:text-4xl">
-            shopify <span className="font-serif italic font-normal">partner</span>
+            {BRAND.name}
           </span>
         </div>
       </header>
