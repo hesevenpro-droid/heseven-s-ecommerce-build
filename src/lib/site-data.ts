@@ -102,6 +102,33 @@ export const PROCESS = [
   },
 ];
 
+export const VALUES = [
+  {
+    title: "Quality",
+    desc: "We prioritise excellence in every project, delivering top-quality services that exceed expectations.",
+  },
+  {
+    title: "Innovation",
+    desc: "Our team stays ahead of industry trends to provide cutting-edge solutions that keep your business competitive.",
+  },
+  {
+    title: "Customer-Centric",
+    desc: "Your success is our success. We focus on understanding your unique needs and crafting personalized strategies to achieve your goals.",
+  },
+  {
+    title: "Integrity",
+    desc: "We believe in transparent, honest, and ethical business practices. Trust is the foundation of our client relationships.",
+  },
+  {
+    title: "Reliability",
+    desc: "We are committed to consistent, dependable service that you can count on.",
+  },
+  {
+    title: "Collaboration",
+    desc: "We work closely with our clients, fostering a collaborative environment to ensure your vision is realized.",
+  },
+];
+
 export const WHY_HESEVEN = [
   { title: "Comprehensive Services", desc: "End-to-end solutions that cover every aspect of your project, from start to finish." },
   { title: "Global Expertise", desc: "Leveraging international experience to deliver exceptional results across borders." },
