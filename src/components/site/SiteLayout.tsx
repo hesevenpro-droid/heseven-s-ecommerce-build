@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import type { ReactNode } from "react";
-import { BRAND, NAV } from "@/lib/site-data";
+import { useState, type ReactNode } from "react";
+import { BRAND, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 
 function ShopifyBag() {
@@ -61,6 +61,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 }
 
 function ProfileCard() {
+  const [showLocations, setShowLocations] = useState(false);
+  const [showLanguages, setShowLanguages] = useState(false);
+
   return (
     <div className="panel p-6 text-center">
       <div className="relative mx-auto h-28 w-28">
@@ -75,7 +78,7 @@ function ProfileCard() {
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
         </span>
         <span>•</span>
-        <span>🇺🇸 From United States</span>
+        <span>{BRAND.locationFlag} {BRAND.location}</span>
       </p>
 
       <h1 className="mt-4 text-xl font-bold leading-snug text-brand-ink">{BRAND.title}</h1>
