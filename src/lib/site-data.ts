@@ -9,9 +9,9 @@ export const BRAND = {
   location: "London, United Kingdom",
   locationFlag: "🇬🇧",
   responseTime: "Less than 1 hour",
-  whatsapp: "+1 (331) 278-2900",
-  whatsappUrl: "https://wa.me/13312782900",
-  email: "info@heseven.com",
+  whatsapp: "+44 7454 744906",
+  whatsappUrl: "https://wa.me/447454744906",
+  email: "heseven.pro@gmail.com",
 };
 
 export const SUPPORTED_LOCATIONS = [
@@ -102,6 +102,33 @@ export const PROCESS = [
   },
 ];
 
+export const VALUES = [
+  {
+    title: "Quality",
+    desc: "We prioritise excellence in every project, delivering top-quality services that exceed expectations.",
+  },
+  {
+    title: "Innovation",
+    desc: "Our team stays ahead of industry trends to provide cutting-edge solutions that keep your business competitive.",
+  },
+  {
+    title: "Customer-Centric",
+    desc: "Your success is our success. We focus on understanding your unique needs and crafting personalized strategies to achieve your goals.",
+  },
+  {
+    title: "Integrity",
+    desc: "We believe in transparent, honest, and ethical business practices. Trust is the foundation of our client relationships.",
+  },
+  {
+    title: "Reliability",
+    desc: "We are committed to consistent, dependable service that you can count on.",
+  },
+  {
+    title: "Collaboration",
+    desc: "We work closely with our clients, fostering a collaborative environment to ensure your vision is realized.",
+  },
+];
+
 export const WHY_HESEVEN = [
   { title: "Comprehensive Services", desc: "End-to-end solutions that cover every aspect of your project, from start to finish." },
   { title: "Global Expertise", desc: "Leveraging international experience to deliver exceptional results across borders." },
@@ -115,7 +142,6 @@ export const NAV = [
   { label: "Portfolio", to: "/portfolio" },
   { label: "Services", to: "/services" },
   { label: "About Us", to: "/about" },
-  { label: "Team", to: "/team" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
@@ -400,15 +426,6 @@ export const LIVE_SITES = [
   { name: "Maisonette", domain: "www.maisonette.com", desc: "Catalogue SEO, site speed improvements and merchandising support" },
 ];
 
-export const TEAM = [
-  { name: "Bawa Aliyu Adam", role: "Founder & Lead Strategist", link: "Visit website", desc: "Leads strategy and client delivery, with years of experience taking eCommerce brands from first build to steady growth." },
-  { name: "Bawa Aliyu Fawaz", role: "Shopify & Frontend Engineering", link: "Visit website", desc: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable." },
-  { name: "Yusuf Abdul Hakeem", role: "Project Manager & Marketing Specialist", link: "Email", desc: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch." },
-  { name: "Qoseem Abdul Bashit", role: "Business Planner & Marketing Strategist", link: "Visit website", desc: "Strategic business planning and comprehensive marketing strategy development for eCommerce success." },
-  { name: "Yusuf Abdul Qudus", role: "Social Media Manager & Marketing Expert", link: "Visit website", desc: "Specializes in creating engaging social media campaigns across Facebook, Instagram, TikTok and Pinterest for maximum brand visibility." },
-  { name: "Sulyman Mubaraq", role: "Google Developer & SEO Specialist", link: "Visit website", desc: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement." },
-  { name: "Yunus Amamat", role: "Backend Developer & Technical Optimization Specialist", link: "Email", desc: "Handles backend integrations, app development and technical performance work across client stores." },
-];
 
 export const REVIEW_BREAKDOWN = [
   { stars: 5, count: 968 },

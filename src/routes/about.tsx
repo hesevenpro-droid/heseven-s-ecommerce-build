@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { KeyMetrics, Panel } from "@/components/site/Sections";
+import { Panel, Values } from "@/components/site/Sections";
 import { BRAND, MORE_SKILLS, SKILLS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
@@ -45,7 +45,7 @@ function About() {
         </div>
       </Panel>
 
-      <KeyMetrics />
+      <Values />
     </SiteLayout>
   );
 }
