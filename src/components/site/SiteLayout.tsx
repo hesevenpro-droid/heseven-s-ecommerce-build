@@ -3,16 +3,6 @@ import { useState, type ReactNode } from "react";
 import { BRAND, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 
-function ShopifyBag() {
-  return (
-    <svg viewBox="0 0 48 54" className="h-11 w-auto" aria-hidden="true">
-      <path fill="#95BF47" d="M37.2 9.6c-.03-.24-.24-.37-.41-.39-.17-.01-3.8-.28-3.8-.28s-2.52-2.5-2.8-2.78c-.28-.28-.82-.19-1.03-.13l-1.41.44C26.9 4.06 25.55 2 23.13 2h-.26C22.2 1.16 21.36.8 20.64.8c-5.6.03-8.28 7.02-9.12 10.57l-3.92 1.21c-1.21.38-1.25.42-1.41 1.56L2.85 44.9l29.2 5.47L48 46.9 37.2 9.6ZM26.4 7.1l-2.28.7v-.5c0-1.5-.2-2.72-.54-3.68 1.36.18 2.27 1.73 2.82 3.48Zm-4.5-3.2c.38 1 .63 2.4.63 4.3v.31l-4.7 1.45c.9-3.47 2.6-5.15 4.07-5.79v-.27Zm-1.8-1.72c.26 0 .53.09.78.26-1.94.91-4.02 3.2-4.9 7.79l-3.72 1.15c1.03-3.5 3.3-9.2 7.84-9.2Z"/>
-      <path fill="#5E8E3E" d="M36.79 9.21c-.17-.01-3.8-.28-3.8-.28s-2.52-2.5-2.8-2.78a.7.7 0 0 0-.39-.18L32.05 50.4 48 46.9 37.2 9.6a.53.53 0 0 0-.41-.39Z"/>
-      <path fill="#FFF" d="M23.13 17.9l-1.97 5.85s-1.73-.92-3.84-.92c-3.1 0-3.26 1.95-3.26 2.44 0 2.68 6.99 3.71 6.99 10 0 4.94-3.13 8.12-7.36 8.12-5.07 0-7.66-3.16-7.66-3.16l1.36-4.49s2.66 2.28 4.9 2.28c1.47 0 2.07-1.15 2.07-2 0-3.5-5.73-3.66-5.73-9.41 0-4.84 3.47-9.52 10.48-9.52 2.7 0 4.02.77 4.02.77Z"/>
-    </svg>
-  );
-}
-
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
@@ -131,7 +121,6 @@ function ProfileCard() {
           <dd className="font-medium text-brand-ink">{BRAND.responseTime}</dd>
         </div>
       </dl>
-
 
       <div className="mt-6 space-y-3">
         <Link
