@@ -8,15 +8,17 @@ import {
 export function Panel({
   title,
   subtitle,
+  titleClassName,
   children,
 }: {
   title?: string;
   subtitle?: string;
+  titleClassName?: string;
   children: React.ReactNode;
 }) {
   return (
     <section className="panel p-6 sm:p-8">
-      {title ? <h2 className="text-xl font-bold text-brand-ink">{title}</h2> : null}
+      {title ? <h2 className={cn("text-xl font-bold", titleClassName || "text-brand-ink")}>{title}</h2> : null}
       {subtitle ? <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p> : null}
       <div className={title ? "mt-6" : ""}>{children}</div>
     </section>
