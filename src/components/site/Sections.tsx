@@ -4,6 +4,7 @@ import {
   LIVE_SITES,
   METRICS,
   SALES_PROOF,
+  VALUES,
 } from "@/lib/site-data";
 
 export function Panel({
@@ -23,6 +24,21 @@ export function Panel({
       {subtitle ? <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p> : null}
       <div className={title ? "mt-6" : ""}>{children}</div>
     </section>
+  );
+}
+
+export function Values() {
+  return (
+    <Panel title="Our Values" titleClassName="text-primary">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {VALUES.map((v) => (
+          <div key={v.title} className="rounded-xl border border-border p-4">
+            <h3 className="text-sm font-semibold text-brand-ink">{v.title}</h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </Panel>
   );
 }
 
