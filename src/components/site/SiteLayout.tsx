@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import type { ReactNode } from "react";
-import { BRAND, NAV } from "@/lib/site-data";
+import { useState, type ReactNode } from "react";
+import { BRAND, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 
 function ShopifyBag() {
@@ -61,6 +61,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 }
 
 function ProfileCard() {
+  const [showLocations, setShowLocations] = useState(false);
+  const [showLanguages, setShowLanguages] = useState(false);
+
   return (
     <div className="panel p-6 text-center">
       <div className="relative mx-auto h-28 w-28">
@@ -75,7 +78,7 @@ function ProfileCard() {
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
         </span>
         <span>•</span>
-        <span>🇺🇸 From United States</span>
+        <span>{BRAND.locationFlag} {BRAND.location}</span>
       </p>
 
       <h1 className="mt-4 text-xl font-bold leading-snug text-brand-ink">{BRAND.title}</h1>
@@ -93,18 +96,43 @@ function ProfileCard() {
 
       <dl className="mt-6 space-y-3 text-left text-sm">
         <div>
-          <dt className="text-muted-foreground">Serving</dt>
-          <dd className="font-medium text-brand-ink">{BRAND.serving}</dd>
+          <dt className="text-muted-foreground">Primary location</dt>
+          <dd className="font-medium text-brand-ink">
+            {BRAND.locationFlag} {BRAND.location}
+          </dd>
+        </div>
+        <div>
+          <dt className="text-muted-foreground">Supported locations</dt>
+          <dd className="font-medium text-brand-ink">
+            {(showLocations ? SUPPORTED_LOCATIONS : SUPPORTED_LOCATIONS.slice(0, 3)).join(", ")}
+          </dd>
+          <button
+            type="button"
+            onClick={() => setShowLocations((v) => !v)}
+            className="mt-1 text-xs font-semibold text-primary hover:underline"
+          >
+            {showLocations ? "Show less" : `View more (${SUPPORTED_LOCATIONS.length - 3})`}
+          </button>
         </div>
         <div>
           <dt className="text-muted-foreground">Languages</dt>
-          <dd className="font-medium text-brand-ink">{BRAND.languages}</dd>
+          <dd className="font-medium text-brand-ink">
+            {(showLanguages ? LANGUAGES : LANGUAGES.slice(0, 3)).join(", ")}
+          </dd>
+          <button
+            type="button"
+            onClick={() => setShowLanguages((v) => !v)}
+            className="mt-1 text-xs font-semibold text-primary hover:underline"
+          >
+            {showLanguages ? "Fewer languages" : `More languages (${LANGUAGES.length - 3})`}
+          </button>
         </div>
         <div>
           <dt className="text-muted-foreground">Average response time</dt>
           <dd className="font-medium text-brand-ink">{BRAND.responseTime}</dd>
         </div>
       </dl>
+
 
       <div className="mt-6 space-y-3">
         <Link

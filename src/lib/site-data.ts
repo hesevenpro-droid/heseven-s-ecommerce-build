@@ -1,18 +1,114 @@
 export const BRAND = {
   name: "Heseven",
-  title: "Heseven — eCommerce & Shopify Growth Agency",
-  tagline: "Turning storefronts into steady, profitable sales channels",
+  title: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance",
+  tagline: "Your Shopify Growth Partner",
   about:
-    "Heseven is a Shopify-focused eCommerce agency. We design, build, optimise and manage online stores for brands that need their storefront to do real commercial work. Our team brings together development, SEO, paid media and retention marketing, so the store we launch keeps improving long after launch day.",
+    "Heseven is a leading Shopify Expert agency, delivering top-notch services globally since 2018. Our talented and passionate team of creative designers and developers is dedicated to providing exceptional, high-quality, tailored solutions — from UI/UX design and development through to ongoing support. As a Shopify Plus development agency, we help businesses worldwide scale their eCommerce with innovative, robust and future-ready solutions.",
   rating: "5.0",
   reviewCount: "1,024",
-  serving: "United States, United Kingdom & West Africa",
-  languages: "English & French",
+  location: "London, United Kingdom",
+  locationFlag: "🇬🇧",
   responseTime: "Less than 1 hour",
   whatsapp: "+1 (331) 278-2900",
   whatsappUrl: "https://wa.me/13312782900",
   email: "info@heseven.com",
 };
+
+export const SUPPORTED_LOCATIONS = [
+  "United Kingdom",
+  "United States",
+  "Canada",
+  "United Arab Emirates",
+  "Australia",
+  "Switzerland",
+  "Germany",
+  "Ireland",
+  "Saudi Arabia",
+  "Sweden",
+  "South Korea",
+  "South Africa",
+  "Poland",
+  "New Zealand",
+  "Mexico",
+  "Luxembourg",
+  "Israel",
+  "Italy",
+  "Hong Kong",
+  "France",
+  "China",
+  "Brazil",
+  "Austria",
+  "Spain",
+  "India",
+  "Singapore",
+  "Netherlands",
+  "Monaco",
+];
+
+export const LANGUAGES = ["English", "Spanish", "German", "French", "Italian"];
+
+export const CORE_SERVICES = [
+  {
+    title: "Store Development",
+    desc: "Bespoke Shopify store builds tailored to your brand, from initial setup to advanced feature integration for a seamless customer experience.",
+  },
+  {
+    title: "Platform Migration",
+    desc: "Smoothly transition from any e-commerce platform to Shopify, preserving your data, design and SEO rankings for uninterrupted sales.",
+  },
+  {
+    title: "Conversion Rate Optimisation",
+    desc: "Enhance your product pages, checkout process and UX to turn more visitors into customers and boost overall sales performance.",
+  },
+  {
+    title: "Speed Optimisation",
+    desc: "Improve page load times and site performance with code refinements and image compression, ensuring a fast, frictionless shopping experience.",
+  },
+  {
+    title: "SEO",
+    desc: "Boost your visibility with on-page SEO, keyword-rich content and technical fixes to drive organic traffic and increase search engine rankings.",
+  },
+  {
+    title: "Store Maintenance",
+    desc: "Keep your store running flawlessly with regular updates, troubleshooting and proactive support to prevent issues before they arise.",
+  },
+];
+
+export const PROCESS = [
+  {
+    step: "Step 1",
+    title: "Kickoff Meeting",
+    desc: "We initiate the process with a call to understand your business goals, target audience and the specific outcomes you aim to achieve. You join our Slack channel, fill out a quick onboarding form and we are ready to start.",
+  },
+  {
+    step: "Step 2",
+    title: "Discovery Phase & Wireframing",
+    desc: "We collect initial ideas and concepts. This research forms the foundation to create a design that speaks directly to your audience, setting the stage for high conversions.",
+  },
+  {
+    step: "Step 3",
+    title: "Design",
+    desc: "We design a visually stunning, professional and user-friendly site that captures attention and keeps your visitors engaged.",
+  },
+  {
+    step: "Step 4",
+    title: "Development",
+    desc: "We build your site using Shopify, ensuring fast load times, seamless functionality, SEO-friendly structure and third-party integrations.",
+  },
+  {
+    step: "Step 5",
+    title: "Launch",
+    desc: "Launch fast, grow faster. In 4–8 weeks you will be ready to launch your brand new website. We hand off designs to your team and support you after launch.",
+  },
+];
+
+export const WHY_HESEVEN = [
+  { title: "Comprehensive Services", desc: "End-to-end solutions that cover every aspect of your project, from start to finish." },
+  { title: "Global Expertise", desc: "Leveraging international experience to deliver exceptional results across borders." },
+  { title: "Tailored Solutions", desc: "Custom strategies designed to meet the unique needs of each client." },
+  { title: "Creative Team", desc: "A dynamic group of innovators dedicated to bringing fresh, impactful ideas to life." },
+];
+
 
 export const NAV = [
   { label: "Reviews", to: "/reviews" },

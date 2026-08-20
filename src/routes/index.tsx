@@ -2,23 +2,23 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { KeyMetrics, Panel } from "@/components/site/Sections";
-import { BRAND, MORE_SKILLS, NAV, SKILLS } from "@/lib/site-data";
+import { BRAND, CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS, WHY_HESEVEN } from "@/lib/site-data";
 import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Heseven — eCommerce & Shopify Growth Agency" },
+      { title: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance" },
       {
         name: "description",
         content:
-          "Heseven is a Shopify Partner agency building, optimising and scaling eCommerce stores with development, SEO, paid media and retention marketing.",
+          "Heseven is a Shopify Expert agency in London delivering custom Shopify store builds, migrations, CRO, speed optimisation, SEO and ongoing maintenance worldwide.",
       },
-      { property: "og:title", content: "Heseven — eCommerce & Shopify Growth Agency" },
+      { property: "og:title", content: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance" },
       {
         property: "og:description",
-        content: "Shopify store development, SEO, ads and CRO that turn storefronts into profitable sales channels.",
+        content: "Custom Shopify store builds, platform migration, CRO, speed optimisation, SEO and store maintenance from a London-based Shopify Partner.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -57,6 +57,48 @@ function Index() {
       </Panel>
 
       <KeyMetrics />
+
+      <Panel title="Our Services">
+        <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+          The Shop Maintenance plan is built around business size, complexity and specific needs, offering the
+          most diversified type of service in Shopify maintenance.
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {CORE_SERVICES.map((s) => (
+            <div key={s.title} className="rounded-xl border border-border p-4">
+              <h3 className="text-sm font-semibold text-brand-ink">{s.title}</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Panel>
+
+      <Panel title="What happens when you come onboard">
+        <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+          From initial strategy to the successful launch of your online store, we follow a detailed 5-step
+          process to ensure outstanding results.
+        </p>
+        <ol className="space-y-4">
+          {PROCESS.map((p) => (
+            <li key={p.step} className="rounded-xl border border-border p-4">
+              <span className="text-xs font-semibold uppercase tracking-wide text-primary">{p.step}</span>
+              <h3 className="mt-1 text-sm font-semibold text-brand-ink">{p.title}</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{p.desc}</p>
+            </li>
+          ))}
+        </ol>
+      </Panel>
+
+      <Panel title="Why Heseven?">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {WHY_HESEVEN.map((w) => (
+            <div key={w.title} className="rounded-xl border border-border p-4">
+              <h3 className="text-sm font-semibold text-brand-ink">{w.title}</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{w.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Panel>
 
       <Panel title="Explore Heseven">
         <div className="grid gap-3 sm:grid-cols-3">
