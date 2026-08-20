@@ -33,6 +33,7 @@ function Contact() {
     <SiteLayout>
       <Panel
         title="We're Here to Help You Succeed"
+        titleClassName="text-primary"
         subtitle="Ready to elevate your e-commerce business? Whether you need a new website, a redesign, or custom development services, we're here to assist you. Fill out the form below or email us directly, and our team will get back to you with a tailored solution to meet your needs."
       >
         <div className="grid gap-4 sm:grid-cols-2">
