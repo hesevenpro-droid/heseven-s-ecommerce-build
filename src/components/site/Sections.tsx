@@ -1,4 +1,14 @@
 import { cn } from "@/lib/utils";
+import v1 from "@/assets/video-review-1.mp4.asset.json";
+import v2 from "@/assets/video-review-2.mp4.asset.json";
+import v3 from "@/assets/video-review-3.mp4.asset.json";
+import v4 from "@/assets/video-review-4.mp4.asset.json";
+import v5 from "@/assets/video-review-5.mp4.asset.json";
+import v6 from "@/assets/video-review-6.mp4.asset.json";
+import v7 from "@/assets/video-review-7.mp4.asset.json";
+import v8 from "@/assets/video-review-8.mp4.asset.json";
+
+const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
 import {
   BRAND,
   LIVE_SITES,
@@ -36,6 +46,29 @@ export function Values() {
             <h3 className="text-sm font-semibold text-brand-ink">{v.title}</h3>
             <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{v.desc}</p>
           </div>
+        ))}
+      </div>
+    </Panel>
+  );
+}
+
+export function VideoReviews() {
+  return (
+    <Panel
+      title="Worn by you"
+      titleClassName="text-primary"
+      subtitle="Shopify and ecommerce store owners talking about sales growth — in their own words."
+    >
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {VIDEO_ASSETS.map((v, i) => (
+          <video
+            key={i}
+            src={v.url}
+            controls
+            playsInline
+            preload="metadata"
+            className="aspect-[9/16] w-full rounded-xl border border-border bg-black object-cover"
+          />
         ))}
       </div>
     </Panel>

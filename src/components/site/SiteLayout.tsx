@@ -1,19 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { BRAND, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
+import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-10">
-          <span className="text-3xl font-bold tracking-tight text-brand-ink sm:text-4xl">
-            {BRAND.name}
-          </span>
-        </div>
-      </header>
-
       <main className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[320px_1fr]">
         <aside className="lg:sticky lg:top-8 lg:self-start">
           <ProfileCard />
@@ -67,7 +59,7 @@ function ProfileCard() {
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
         </span>
         <span>•</span>
-        <span>{BRAND.locationFlag} {BRAND.location}</span>
+        <span className="inline-flex items-center gap-1"><img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="inline-block h-3 w-[18px] rounded-[2px] object-cover align-[-1px]" /> {BRAND.location}</span>
       </p>
 
       <h1 className="mt-4 text-xl font-bold leading-snug text-brand-ink">{BRAND.title}</h1>
@@ -87,7 +79,7 @@ function ProfileCard() {
         <div>
           <dt className="text-muted-foreground">Primary location</dt>
           <dd className="font-medium text-brand-ink">
-            {BRAND.locationFlag} {BRAND.location}
+            <span className="inline-flex items-center gap-1.5"><img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="inline-block h-3 w-[18px] rounded-[2px] object-cover align-[-1px]" /> {BRAND.location}</span>
           </dd>
         </div>
         <div>
@@ -115,6 +107,10 @@ function ProfileCard() {
           >
             {showLanguages ? "Fewer languages" : `More languages (${LANGUAGES.length - 3})`}
           </button>
+        </div>
+        <div>
+          <dt className="text-muted-foreground">Industries</dt>
+          <dd className="font-medium text-brand-ink">{INDUSTRIES.join(", ")}</dd>
         </div>
         <div>
           <dt className="text-muted-foreground">Average response time</dt>

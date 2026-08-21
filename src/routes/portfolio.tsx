@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { CtaPanel, KeyMetrics, LiveSites, Panel, SalesProof } from "@/components/site/Sections";
+import { CtaPanel, KeyMetrics, LiveSites, Panel, SalesProof, VideoReviews } from "@/components/site/Sections";
 import { PORTFOLIO } from "@/lib/site-data";
 
 export const Route = createFileRoute("/portfolio")({
@@ -28,6 +28,8 @@ export const Route = createFileRoute("/portfolio")({
 function Portfolio() {
   return (
     <SiteLayout>
+      <VideoReviews />
+
       <KeyMetrics />
 
       <Panel

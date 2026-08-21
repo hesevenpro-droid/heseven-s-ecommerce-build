@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { KeyMetrics, Panel } from "@/components/site/Sections";
+import { KeyMetrics, Panel, VideoReviews } from "@/components/site/Sections";
 import { BRAND, CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS, WHY_HESEVEN } from "@/lib/site-data";
 import { Link } from "@tanstack/react-router";
 
@@ -55,6 +55,8 @@ function Index() {
           {showAll ? "Show fewer skills" : `Show all ${SKILLS.length + MORE_SKILLS.length} skills`}
         </button>
       </Panel>
+
+      <VideoReviews />
 
       <KeyMetrics />
 
