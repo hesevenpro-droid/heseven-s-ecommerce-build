@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { CtaPanel, KeyMetrics, LiveSites, Panel, SalesProof } from "@/components/site/Sections";
+import { CtaPanel, KeyMetrics, LiveSites, Panel, SalesProof, VideoReviews } from "@/components/site/Sections";
 import { BRAND, REVIEW_BREAKDOWN, TESTIMONIALS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/reviews")({
@@ -30,25 +30,9 @@ function Reviews() {
 
   return (
     <SiteLayout>
-      <KeyMetrics />
+      <VideoReviews />
 
-      <Panel
-        title="Video Reviews"
-        subtitle="Shopify and ecommerce store owners talking about sales growth — in their own words."
-      >
-        <div className="grid gap-4 sm:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="overflow-hidden rounded-xl border border-border">
-              <div className="flex h-36 items-center justify-center bg-gradient-to-br from-secondary to-accent">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  ▶
-                </span>
-              </div>
-              <p className="p-4 text-sm font-semibold text-brand-ink">Shopify store owner review</p>
-            </div>
-          ))}
-        </div>
-      </Panel>
+      <KeyMetrics />
 
       <SalesProof />
       <LiveSites />
