@@ -7,13 +7,13 @@ export const Route = createFileRoute("/reviews")({
   component: Reviews,
   head: () => ({
     meta: [
-      { title: "Reviews — Heseven Shopify Agency" },
+      { title: "Reviews: Heseven Shopify Agency" },
       {
         name: "description",
         content:
-          "Shopify store owner reviews for Heseven: 4.9 average rating across 1,024 reviews, plus sales proof from real client stores.",
+          "Shopify store owner reviews for Heseven: 4.9 average rating across 136 reviews, plus sales proof from real client stores.",
       },
-      { property: "og:title", content: "Reviews — Heseven Shopify Agency" },
+      { property: "og:title", content: "Reviews: Heseven Shopify Agency" },
       {
         property: "og:description",
         content: "What brands say after working with Heseven on their Shopify stores.",

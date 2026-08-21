@@ -1,11 +1,11 @@
 export const BRAND = {
   name: "Heseven",
-  title: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance",
+  title: "heseven",
   tagline: "Your Shopify Growth Partner",
   about:
-    "Heseven is a leading Shopify Expert agency, delivering top-notch services globally since 2018. Our talented and passionate team of creative designers and developers is dedicated to providing exceptional, high-quality, tailored solutions — from UI/UX design and development through to ongoing support. As a Shopify Plus development agency, we help businesses worldwide scale their eCommerce with innovative, robust and future-ready solutions.",
-  rating: "5.0",
-  reviewCount: "1,024",
+    "Heseven is a leading Shopify Expert agency, delivering top-notch services globally since 2018. Our talented and passionate team of creative designers and developers is dedicated to providing exceptional, high-quality, tailored solutions, from UI/UX design and development through to ongoing support. As a Shopify Plus development agency, we help businesses worldwide scale their eCommerce with innovative, robust and future-ready solutions.",
+  rating: "4.9",
+  reviewCount: "136",
   location: "London, United Kingdom",
   locationFlag: "🇬🇧",
   responseTime: "Less than 1 hour",
@@ -102,7 +102,7 @@ export const PROCESS = [
   {
     step: "Step 5",
     title: "Launch",
-    desc: "Launch fast, grow faster. In 4–8 weeks you will be ready to launch your brand new website. We hand off designs to your team and support you after launch.",
+    desc: "Launch fast, grow faster. In 4 to 8 weeks you will be ready to launch your brand new website. We hand off designs to your team and support you after launch.",
   },
 ];
 
@@ -235,7 +235,7 @@ export const SERVICES = [
   },
   {
     title: "Error Fixing",
-    desc: "Troubleshooting for broken themes, conflicting apps, liquid errors and checkout issues — diagnosed and repaired.",
+    desc: "Troubleshooting for broken themes, conflicting apps, liquid errors and checkout issues, diagnosed and repaired.",
     reviews: 131,
     specialists: 9,
     returning: 66,
@@ -389,14 +389,14 @@ export const PORTFOLIO = [
     likes: 66,
   },
   {
-    title: "TikTok Ads — Profitable Sales Campaigns",
+    title: "TikTok Ads: Profitable Sales Campaigns",
     desc: "TikTok Ads Manager campaigns scaled on tested UGC creative, delivering consistent purchase volume at a profitable cost per conversion.",
     tag: "Paid Media",
     time: "Ongoing",
     likes: 88,
   },
   {
-    title: "Facebook & Instagram Ads — ROAS Growth",
+    title: "Facebook & Instagram Ads: ROAS Growth",
     desc: "Meta ad account rebuilt around clean Pixel/CAPI tracking and winning creative, lifting return on ad spend month over month.",
     tag: "Paid Media",
     time: "Ongoing",
@@ -405,7 +405,7 @@ export const PORTFOLIO = [
 ];
 
 export const SALES_PROOF = [
-  { title: "Sales Proof — Revenue Dashboard", desc: "Store revenue growth after conversion and retention work." },
+  { title: "Sales Proof: Revenue Dashboard", desc: "Store revenue growth after conversion and retention work." },
   { title: "health-emporium.co.uk", desc: "SEO and CRO work driving consistent monthly order growth." },
   { title: "Namana London", desc: "Paid social and email flows scaling monthly sales." },
   { title: "holiyaypuzzles.com", desc: "Seasonal campaign push with Google Ads and Merchant feed." },
@@ -429,11 +429,11 @@ export const LIVE_SITES = [
 
 
 export const REVIEW_BREAKDOWN = [
-  { stars: 5, count: 968 },
-  { stars: 4, count: 44 },
-  { stars: 3, count: 8 },
-  { stars: 2, count: 3 },
-  { stars: 1, count: 1 },
+  { stars: 5, count: 123 },
+  { stars: 4, count: 12 },
+  { stars: 3, count: 0 },
+  { stars: 2, count: 1 },
+  { stars: 1, count: 0 },
 ];
 
 export const TESTIMONIALS = [

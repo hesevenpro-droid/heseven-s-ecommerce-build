@@ -8,13 +8,13 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact Heseven — Shopify Agency" },
+      { title: "Contact Heseven: Shopify Agency" },
       {
         name: "description",
         content:
-          "Talk to the Heseven team about your Shopify store. WhatsApp, email or send a message — average response time under one hour.",
+          "Talk to the Heseven team about your Shopify store. WhatsApp, email or send a message, average response time under one hour.",
       },
-      { property: "og:title", content: "Contact Heseven — Shopify Agency" },
+      { property: "og:title", content: "Contact Heseven: Shopify Agency" },
       {
         property: "og:description",
         content: "Get in touch with the Heseven team about your store build, SEO or ads.",
@@ -87,7 +87,7 @@ function Contact() {
             </button>
             {sent ? (
               <p className="mt-3 text-sm text-primary">
-                Thanks — your message has been noted. We'll reply within the hour.
+                Thanks, your message has been noted. We'll reply within the hour.
               </p>
             ) : null}
           </div>

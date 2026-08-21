@@ -57,7 +57,7 @@ export function VideoReviews() {
     <Panel
       title="Worn by you"
       titleClassName="text-primary"
-      subtitle="Shopify and ecommerce store owners talking about sales growth — in their own words."
+      subtitle="Shopify and ecommerce store owners talking about sales growth, in their own words."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {VIDEO_ASSETS.map((v, i) => (
@@ -94,7 +94,7 @@ export function SalesProof() {
   return (
     <Panel
       title="Shopify Sales Proof"
-      subtitle="Real Shopify dashboards and ecommerce revenue screens from stores we've grown — not mockups."
+      subtitle="Real Shopify dashboards and ecommerce revenue screens from stores we've grown, not mockups."
     >
       <div className="grid gap-4 sm:grid-cols-2">
         {SALES_PROOF.map((s) => (

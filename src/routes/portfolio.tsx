@@ -7,13 +7,13 @@ export const Route = createFileRoute("/portfolio")({
   component: Portfolio,
   head: () => ({
     meta: [
-      { title: "Portfolio — Heseven Shopify Projects" },
+      { title: "Portfolio: Heseven Shopify Projects" },
       {
         name: "description",
         content:
           "Recent Shopify projects from Heseven: technical SEO overhauls, page speed work, Merchant Center approvals and paid media scaling.",
       },
-      { property: "og:title", content: "Portfolio — Heseven Shopify Projects" },
+      { property: "og:title", content: "Portfolio: Heseven Shopify Projects" },
       {
         property: "og:description",
         content: "A selection of recent eCommerce projects and the outcomes that mattered to each client.",
