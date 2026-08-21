@@ -6,14 +6,6 @@ import logo from "@/assets/heseven-logo.jpg.asset.json";
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-10">
-          <span className="text-3xl font-bold tracking-tight text-brand-ink sm:text-4xl">
-            {BRAND.name}
-          </span>
-        </div>
-      </header>
-
       <main className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[320px_1fr]">
         <aside className="lg:sticky lg:top-8 lg:self-start">
           <ProfileCard />
