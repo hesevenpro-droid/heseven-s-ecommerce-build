@@ -42,6 +42,29 @@ export function Values() {
   );
 }
 
+export function VideoReviews() {
+  return (
+    <Panel
+      title="Worn by you"
+      titleClassName="text-primary"
+      subtitle="Shopify and ecommerce store owners talking about sales growth — in their own words."
+    >
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {VIDEO_ASSETS.map((v, i) => (
+          <video
+            key={i}
+            src={v.url}
+            controls
+            playsInline
+            preload="metadata"
+            className="aspect-[9/16] w-full rounded-xl border border-border bg-black object-cover"
+          />
+        ))}
+      </div>
+    </Panel>
+  );
+}
+
 export function KeyMetrics() {
   return (
     <Panel title="Key Metrics">
