@@ -62,16 +62,12 @@ function ProfileCard() {
         <span className="inline-flex items-center gap-1"><img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="inline-block h-3 w-[18px] rounded-[2px] object-cover align-[-1px]" /> {BRAND.location}</span>
       </p>
 
-      <h1 className="mt-4 text-xl font-bold leading-snug text-brand-ink">{BRAND.title}</h1>
+      <h1 className="mt-4 text-2xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
 
       <p className="mt-3 text-sm text-brand-ink">
         <span className="text-amber-500">★</span> <strong>{BRAND.rating}</strong>{" "}
-        <span className="text-muted-foreground">({BRAND.reviewCount} reviews)</span>
+        <span className="text-muted-foreground">({BRAND.reviewCount})</span>
       </p>
-
-      <span className="mt-3 inline-block rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground">
-        Shopify Partner
-      </span>
 
       <p className="mt-4 text-sm italic text-muted-foreground">"{BRAND.tagline}"</p>
 
