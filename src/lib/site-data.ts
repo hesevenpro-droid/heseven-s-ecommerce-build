@@ -47,6 +47,10 @@ export const SUPPORTED_LOCATIONS = [
 
 export const LANGUAGES = ["English", "Spanish", "German", "French", "Italian"];
 
+export const INDUSTRIES = ["Clothing and fashion", "Health and beauty", "Lifestyle"];
+
+export const VIDEO_REVIEWS = [1, 2, 3, 4, 5, 6, 7, 8];
+
 export const CORE_SERVICES = [
   {
     title: "Store Development",
@@ -409,21 +413,18 @@ export const SALES_PROOF = [
 ];
 
 export const LIVE_SITES = [
-  { name: "Mobile Drugs Screen", domain: "mobiledrugsscreen.com", desc: "Store build, technical SEO fixes and Google Search Console setup" },
-  { name: "Music Box Attic", domain: "www.musicboxattic.com", desc: "Product SEO, page speed optimisation and merchant feed clean-up" },
-  { name: "Children's HHA", domain: "childrenshha.com", desc: "Site health audit, broken link repair and on-page SEO" },
-  { name: "Retrospec", domain: "retrospec.com", desc: "Conversion rate optimisation and performance tuning" },
+  { name: "Wuka Wear", domain: "www.wukawear.com", desc: "Store development, product SEO and conversion rate optimisation" },
+  { name: "Coyalz Hair Care", domain: "www.coyalzhaircare.com", desc: "Shopify build, theme customisation and launch support" },
+  { name: "Powerlete Clothing", domain: "www.powerleteclo.com", desc: "Paid social creative testing and campaign management" },
+  { name: "Lifestyle Home Collection", domain: "www.lifestylehomecollection.org", desc: "Catalogue setup, merchandising and on-page SEO" },
+  { name: "The Wine Caverns", domain: "www.thewinecaverns.co.uk", desc: "Technical SEO, page speed and Merchant Center feed clean-up" },
+  { name: "Retrospec", domain: "www.retrospec.com", desc: "Conversion rate optimisation and performance tuning" },
+  { name: "Bioenex", domain: "www.bioenex.de", desc: "Store migration, localisation and structured data" },
   { name: "Darn Tough", domain: "darntough.com", desc: "Technical SEO, structured data and Core Web Vitals work" },
-  { name: "Weightlifting House UK", domain: "ukstore.weightliftinghouse.com", desc: "Shopify store development and catalogue migration" },
-  { name: "The Landmark Project", domain: "thelandmarkproject.com", desc: "Email marketing automation and retention flows" },
-  { name: "Slick Gorilla", domain: "slickgorilla.co.uk", desc: "Paid social creative testing and campaign management" },
-  { name: "Men's Compression Shirt", domain: "www.menscompressionshirt.com", desc: "Google Ads, Merchant Center feed and product SEO" },
-  { name: "The Good Kiddy Collection", domain: "thegoodkiddycollection.store", desc: "Full store setup, theme customisation and launch" },
-  { name: "Stay Loaded", domain: "stay-loaded.com", desc: "Dropshipping setup, supplier integration and CRO" },
-  { name: "Belly Bandit", domain: "bellybandit.com", desc: "SEO overhaul and content optimisation" },
-  { name: "Affliction Clothing", domain: "www.afflictionclothing.com", desc: "Performance optimisation and paid media support" },
-  { name: "Greedier Social Media", domain: "greediersocialmedia.co.uk", desc: "Social media marketing site support, SEO and performance optimisation" },
-  { name: "Maisonette", domain: "www.maisonette.com", desc: "Catalogue SEO, site speed improvements and merchandising support" },
+  { name: "Waldo Watches", domain: "www.waldowatches.com", desc: "Product page SEO and email marketing automation" },
+  { name: "Vroom Classics", domain: "www.vroomclassics.com", desc: "Custom Shopify sections and speed optimisation" },
+  { name: "Slick Gorilla", domain: "www.slickgorilla.co.uk", desc: "Paid social creative testing and campaign management" },
+  { name: "The Water Boutique", domain: "www.thewaterboutique.com", desc: "Store setup, Google Ads and Merchant Center feed" },
 ];
 
 
