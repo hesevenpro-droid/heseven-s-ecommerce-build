@@ -9,13 +9,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance" },
+      { title: "Heseven Shopify Partner Agency | Custom Store Builds & Maintenance" },
       {
         name: "description",
         content:
           "Heseven is a Shopify Expert agency in London delivering custom Shopify store builds, migrations, CRO, speed optimisation, SEO and ongoing maintenance worldwide.",
       },
-      { property: "og:title", content: "Heseven – Shopify Partner Agency | Custom Store Builds & Maintenance" },
+      { property: "og:title", content: "Heseven Shopify Partner Agency | Custom Store Builds & Maintenance" },
       {
         property: "og:description",
         content: "Custom Shopify store builds, platform migration, CRO, speed optimisation, SEO and store maintenance from a London-based Shopify Partner.",

@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Heseven — eCommerce & Shopify Growth Agency" },
+      { title: "Heseven eCommerce & Shopify Growth Agency" },
       {
         name: "description",
         content: "Shopify Partner agency building, optimising and scaling eCommerce stores.",

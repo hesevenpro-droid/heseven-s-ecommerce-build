@@ -7,13 +7,13 @@ export const Route = createFileRoute("/services")({
   component: Services,
   head: () => ({
     meta: [
-      { title: "Shopify & eCommerce Services — Heseven" },
+      { title: "Shopify & eCommerce Services: Heseven" },
       {
         name: "description",
         content:
           "Shopify store development, dropshipping builds, SEO, CRO, Google and Meta ads, email automation and more from Heseven.",
       },
-      { property: "og:title", content: "Shopify & eCommerce Services — Heseven" },
+      { property: "og:title", content: "Shopify & eCommerce Services: Heseven" },
       {
         property: "og:description",
         content: "End-to-end Shopify solutions built to help your brand grow in a competitive eCommerce market.",

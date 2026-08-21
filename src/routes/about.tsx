@@ -7,13 +7,13 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About Heseven — Shopify eCommerce Agency" },
+      { title: "About Heseven: Shopify eCommerce Agency" },
       {
         name: "description",
         content:
           "Heseven designs, builds and manages Shopify stores, combining development, SEO, paid media and retention marketing.",
       },
-      { property: "og:title", content: "About Heseven — Shopify eCommerce Agency" },
+      { property: "og:title", content: "About Heseven: Shopify eCommerce Agency" },
       {
         property: "og:description",
         content: "Who we are and how our Shopify agency helps brands grow after launch day.",
