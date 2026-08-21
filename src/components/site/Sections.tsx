@@ -1,4 +1,14 @@
 import { cn } from "@/lib/utils";
+import v1 from "@/assets/video-review-1.mp4.asset.json";
+import v2 from "@/assets/video-review-2.mp4.asset.json";
+import v3 from "@/assets/video-review-3.mp4.asset.json";
+import v4 from "@/assets/video-review-4.mp4.asset.json";
+import v5 from "@/assets/video-review-5.mp4.asset.json";
+import v6 from "@/assets/video-review-6.mp4.asset.json";
+import v7 from "@/assets/video-review-7.mp4.asset.json";
+import v8 from "@/assets/video-review-8.mp4.asset.json";
+
+const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
 import {
   BRAND,
   LIVE_SITES,
