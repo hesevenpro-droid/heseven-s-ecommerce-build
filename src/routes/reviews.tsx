@@ -32,7 +32,6 @@ function Reviews() {
     <SiteLayout>
       <VideoReviews />
 
-      <KeyMetrics />
 
       <SalesProof />
       <LiveSites />
