@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { CtaPanel, KeyMetrics, LiveSites, Panel, SalesProof, VideoReviews } from "@/components/site/Sections";
+import { CtaPanel, LiveSites, Panel, SalesProof, VideoReviews } from "@/components/site/Sections";
 import { BRAND, REVIEW_BREAKDOWN, TESTIMONIALS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/reviews")({
   component: Reviews,
   head: () => ({
     meta: [
-      { title: "Reviews: Heseven Shopify Agency" },
+      { title: "Work & Reviews: Heseven Shopify Agency" },
       {
         name: "description",
         content:
           "Shopify store owner reviews for Heseven: 4.9 average rating across 136 reviews, plus sales proof from real client stores.",
       },
-      { property: "og:title", content: "Reviews: Heseven Shopify Agency" },
+      { property: "og:title", content: "Work & Reviews: Heseven Shopify Agency" },
       {
         property: "og:description",
         content: "What brands say after working with Heseven on their Shopify stores.",

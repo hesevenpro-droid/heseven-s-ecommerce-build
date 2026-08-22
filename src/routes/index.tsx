@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { KeyMetrics, Panel, VideoReviews } from "@/components/site/Sections";
+import { Panel, VideoReviews } from "@/components/site/Sections";
 import { BRAND, CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS, WHY_HESEVEN } from "@/lib/site-data";
 import { Link } from "@tanstack/react-router";
 
@@ -58,7 +58,6 @@ function Index() {
 
       <VideoReviews />
 
-      <KeyMetrics />
 
       <Panel title="Our Services">
         <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
