@@ -54,15 +54,15 @@ function ProfileCard() {
         <span className="absolute bottom-2 right-2 h-4 w-4 rounded-full border-2 border-card bg-emerald-500" />
       </div>
 
-      <p className="mt-4 flex flex-wrap items-center justify-center gap-x-2 text-xs text-muted-foreground">
+      <h1 className="mt-4 text-2xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
+
+      <p className="mt-3 flex flex-wrap items-center justify-center gap-x-2 text-xs text-muted-foreground">
         <span className="inline-flex items-center gap-1 text-emerald-600">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
         </span>
         <span>•</span>
         <span className="inline-flex items-center gap-1"><img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="inline-block h-3 w-[18px] rounded-[2px] object-cover align-[-1px]" /> {BRAND.location}</span>
       </p>
-
-      <h1 className="mt-4 text-2xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
 
       <p className="mt-3 text-sm text-brand-ink">
         <span className="text-amber-500">★</span> <strong>{BRAND.rating}</strong>{" "}
