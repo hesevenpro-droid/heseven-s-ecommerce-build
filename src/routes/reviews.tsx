@@ -38,29 +38,25 @@ function Reviews() {
       <LiveSites />
 
       <Panel
-        title="Shopify Store Owner Reviews"
-        subtitle="Every piece of client feedback shapes how we work. Here is what brands say after working with us."
+        title={`Rating ${BRAND.rating}(${BRAND.reviewCount})`}
+        subtitle="Overall rating summary"
       >
-        <div className="grid gap-6 sm:grid-cols-[200px_1fr]">
-          <div className="rounded-xl bg-secondary p-5 text-center">
-            <p className="text-4xl font-bold text-brand-ink">4.9</p>
-            <p className="mt-1 text-amber-500">★★★★★</p>
-            <p className="mt-1 text-xs text-muted-foreground">{BRAND.reviewCount} reviews</p>
-          </div>
-          <div className="space-y-2">
-            {REVIEW_BREAKDOWN.map((r) => (
-              <div key={r.stars} className="flex items-center gap-3 text-xs text-muted-foreground">
-                <span className="w-12">{r.stars} star</span>
-                <div className="h-2 flex-1 rounded-full bg-secondary">
-                  <div
-                    className="h-2 rounded-full bg-amber-400"
-                    style={{ width: `${(r.count / total) * 100}%` }}
-                  />
-                </div>
-                <span className="w-10 text-right">{r.count}</span>
+        <p className="mb-5 text-sm text-muted-foreground">
+          Ratings based on quality of work and communication
+        </p>
+        <div className="space-y-2">
+          {REVIEW_BREAKDOWN.map((r) => (
+            <div key={r.stars} className="flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="w-24 text-amber-500">{"★".repeat(r.stars)}</span>
+              <div className="h-2 flex-1 rounded-full bg-secondary">
+                <div
+                  className="h-2 rounded-full bg-amber-400"
+                  style={{ width: `${total ? (r.count / total) * 100 : 0}%` }}
+                />
               </div>
-            ))}
-          </div>
+              <span className="w-10 text-right">({r.count})</span>
+            </div>
+          ))}
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
