@@ -133,11 +133,25 @@ export const VALUES = [
   },
 ];
 
+export const WHY_HESEVEN_INTRO =
+  "Heseven is a leading Shopify Expert agency, delivering top-notch services globally since 2018. Our talented and passionate team of creative designers is dedicated to providing you with exceptional, high-quality, tailored solutions.";
+
 export const WHY_HESEVEN = [
   { title: "Comprehensive Services", desc: "End-to-end solutions that cover every aspect of your project, from start to finish." },
   { title: "Global Expertise", desc: "Leveraging international experience to deliver exceptional results across borders." },
   { title: "Tailored Solutions", desc: "Custom strategies designed to meet the unique needs of each client." },
-  { title: "Creative Team", desc: "A dynamic group of innovators dedicated to bringing fresh, impactful ideas to life." },
+];
+
+export const STORY_INTRO =
+  "Since 2018, Heseven has helped businesses build, improve, and grow with Shopify. What started as a vision to deliver better e-commerce experiences has grown into a global team serving brands across different industries.";
+
+export const STORY_TIMELINE = [
+  { year: "2018", title: "The Beginning", desc: "Heseven was founded with a simple goal: helping businesses build better e-commerce experiences with Shopify." },
+  { year: "2019", title: "Growing the Team", desc: "We expanded our team and built a strong client base with talented designers and developers." },
+  { year: "2020", title: "Expanding Our Expertise", desc: "We expanded our Shopify customisation and development services to meet the evolving needs of e-commerce." },
+  { year: "2021 to 2022", title: "Building Our Reputation", desc: "Our growing portfolio and client relationships helped establish Heseven as a trusted Shopify partner." },
+  { year: "2023", title: "New Opportunities", desc: "We expanded our services and continued investing in the technology and expertise our clients need." },
+  { year: "Today", title: "Looking Ahead", desc: "We continue to help brands create better Shopify stores and achieve their e-commerce goals." },
 ];
 
 
