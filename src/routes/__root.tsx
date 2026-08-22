@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Heseven eCommerce & Shopify Growth Agency" },
       {
         name: "description",
-        content: "Shopify Partner agency building, optimising and scaling eCommerce stores.",
+        content: "Shopify Expert agency building, optimising and scaling eCommerce stores.",
       },
       { property: "og:site_name", content: "Heseven" },
       { property: "og:type", content: "website" },

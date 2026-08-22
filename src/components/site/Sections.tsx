@@ -12,7 +12,6 @@ const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
 import {
   BRAND,
   LIVE_SITES,
-  METRICS,
   SALES_PROOF,
   VALUES,
 } from "@/lib/site-data";
@@ -75,20 +74,6 @@ export function VideoReviews() {
   );
 }
 
-export function KeyMetrics() {
-  return (
-    <Panel title="Key Metrics">
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {METRICS.map((m) => (
-          <div key={m.label} className="rounded-xl bg-secondary px-4 py-5 text-center">
-            <p className="text-2xl font-bold text-brand-ink">{m.value}</p>
-            <p className="mt-1 text-xs text-muted-foreground">{m.label}</p>
-          </div>
-        ))}
-      </div>
-    </Panel>
-  );
-}
 
 export function SalesProof() {
   return (
@@ -137,12 +122,12 @@ export function LiveSites() {
             <div className="border-b border-border bg-secondary px-3 py-2 text-[11px] text-muted-foreground">
               {site.domain}
             </div>
-            <div className="flex h-24 items-center justify-center bg-gradient-to-br from-secondary to-accent">
+            <div className="aspect-[16/10] w-full overflow-hidden bg-secondary">
               <img
-                src={`https://www.google.com/s2/favicons?domain=${site.domain}&sz=128`}
-                alt={`${site.name} favicon`}
+                src={`https://image.thum.io/get/width/800/crop/900/https://${site.domain}/`}
+                alt={`${site.name} homepage screenshot`}
                 loading="lazy"
-                className="h-10 w-10 rounded"
+                className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
               />
             </div>
             <div className="p-4">
@@ -163,18 +148,19 @@ export function CtaPanel() {
   return (
     <section className="panel p-6 text-center sm:p-8">
       <h2 className="text-xl font-bold text-brand-ink">
-        Want a store that looks and sells like these?
+        Interested in working <span className="text-primary">Together</span>?
       </h2>
       <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">
-        Send your store URL and what's not working. We'll review it and reply within the hour.
+        Let's unlock your business's full potential together. Reach out today to start the
+        conversation and ignite your growth
       </p>
       <a
         href={BRAND.whatsappUrl}
         target="_blank"
         rel="noreferrer"
-        className="btn-cta mt-5 inline-block rounded-full px-6 py-3 text-sm font-semibold"
+        className="btn-cta mt-5 inline-block rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide"
       >
-        Message on WhatsApp
+        Contact Us Now
       </a>
     </section>
   );

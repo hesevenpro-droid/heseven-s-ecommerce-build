@@ -142,8 +142,7 @@ export const WHY_HESEVEN = [
 
 
 export const NAV = [
-  { label: "Reviews", to: "/reviews" },
-  { label: "Portfolio", to: "/portfolio" },
+  { label: "Work & Reviews", to: "/reviews" },
   { label: "Services", to: "/services" },
   { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
@@ -172,16 +171,6 @@ export const MORE_SKILLS = [
   "Store Migration",
   "Speed Optimization",
   "Analytics & Tracking",
-];
-
-export const METRICS = [
-  { value: "$6.2M+", label: "Revenue Generated" },
-  { value: "500+", label: "Stores Transformed" },
-  { value: "450+", label: "Projects Completed" },
-  { value: "6+", label: "Years Experience" },
-  { value: "280+", label: "Happy Clients" },
-  { value: "98%", label: "Success Rate" },
-  { value: "4.9/5", label: "Average Rating" },
 ];
 
 export const SERVICES = [
@@ -336,72 +325,6 @@ export const SUCCESS_RATINGS = [
   { label: "Store Optimization", value: 97 },
   { label: "Shopify Marketing", value: 95 },
   { label: "Client Support", value: 99 },
-];
-
-export const PORTFOLIO = [
-  {
-    title: "Full Technical SEO Overhaul",
-    desc: "Technical, on-page, mobile and content SEO clean-up that took the store's audit score to a perfect 100%.",
-    tag: "SEO",
-    time: "2 weeks",
-    likes: 91,
-  },
-  {
-    title: "Core Web Vitals & Page Speed Optimization",
-    desc: "Asset, script and image optimisation that lifted the mobile PageSpeed Insights performance score to 100.",
-    tag: "Performance",
-    time: "1 week",
-    likes: 84,
-  },
-  {
-    title: "Google Merchant Center Feed Approval",
-    desc: "Product feed setup and error clean-up with all 64 products approved in Google Merchant Center and zero disapprovals.",
-    tag: "Google Shopping",
-    time: "10 days",
-    likes: 73,
-  },
-  {
-    title: "Site Health Audit & Broken Link Repair",
-    desc: "412 URLs crawled and repaired across the store, finishing with 0 broken links and 0 crawl errors.",
-    tag: "SEO",
-    time: "5 days",
-    likes: 58,
-  },
-  {
-    title: "XML Sitemap Submission & Indexing Setup",
-    desc: "Sitemap generated and successfully submitted to Google Search Console so new pages get indexed faster.",
-    tag: "Technical SEO",
-    time: "2 days",
-    likes: 47,
-  },
-  {
-    title: "Google Search Console Ownership Verification",
-    desc: "Domain ownership verified so search performance, indexing and coverage data are fully tracked.",
-    tag: "Technical SEO",
-    time: "1 day",
-    likes: 39,
-  },
-  {
-    title: "Product Page SEO Optimization",
-    desc: "Focus keywords, titles and meta descriptions optimised across the catalogue for perfect meta tag scores.",
-    tag: "SEO",
-    time: "2 weeks",
-    likes: 66,
-  },
-  {
-    title: "TikTok Ads: Profitable Sales Campaigns",
-    desc: "TikTok Ads Manager campaigns scaled on tested UGC creative, delivering consistent purchase volume at a profitable cost per conversion.",
-    tag: "Paid Media",
-    time: "Ongoing",
-    likes: 88,
-  },
-  {
-    title: "Facebook & Instagram Ads: ROAS Growth",
-    desc: "Meta ad account rebuilt around clean Pixel/CAPI tracking and winning creative, lifting return on ad spend month over month.",
-    tag: "Paid Media",
-    time: "Ongoing",
-    likes: 95,
-  },
 ];
 
 export const SALES_PROOF = [

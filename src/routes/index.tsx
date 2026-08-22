@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { KeyMetrics, Panel, VideoReviews } from "@/components/site/Sections";
+import { Panel, VideoReviews } from "@/components/site/Sections";
 import { BRAND, CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS, WHY_HESEVEN } from "@/lib/site-data";
 import { Link } from "@tanstack/react-router";
 
@@ -9,16 +9,16 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Heseven Shopify Partner Agency | Custom Store Builds & Maintenance" },
+      { title: "Heseven Shopify Growth Agency | Custom Store Builds & Maintenance" },
       {
         name: "description",
         content:
           "Heseven is a Shopify Expert agency in London delivering custom Shopify store builds, migrations, CRO, speed optimisation, SEO and ongoing maintenance worldwide.",
       },
-      { property: "og:title", content: "Heseven Shopify Partner Agency | Custom Store Builds & Maintenance" },
+      { property: "og:title", content: "Heseven Shopify Growth Agency | Custom Store Builds & Maintenance" },
       {
         property: "og:description",
-        content: "Custom Shopify store builds, platform migration, CRO, speed optimisation, SEO and store maintenance from a London-based Shopify Partner.",
+        content: "Custom Shopify store builds, platform migration, CRO, speed optimisation, SEO and store maintenance from a London-based Shopify Expert agency.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -58,7 +58,6 @@ function Index() {
 
       <VideoReviews />
 
-      <KeyMetrics />
 
       <Panel title="Our Services">
         <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
