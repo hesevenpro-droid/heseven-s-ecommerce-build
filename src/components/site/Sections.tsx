@@ -109,6 +109,81 @@ export function SalesProof() {
   );
 }
 
+export function WhyHeseven() {
+  return (
+    <Panel
+      title="Why Heseven?"
+      titleClassName="text-brand-ink"
+      subtitle={WHY_HESEVEN_INTRO}
+    >
+      <div className="grid gap-4 sm:grid-cols-3">
+        {WHY_HESEVEN.map((w) => (
+          <div key={w.title} className="rounded-xl border border-border p-4">
+            <h3 className="text-sm font-semibold text-brand-ink">{w.title}</h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{w.desc}</p>
+          </div>
+        ))}
+      </div>
+    </Panel>
+  );
+}
+
+export function OurStory() {
+  return (
+    <Panel title="Our Story" subtitle={STORY_INTRO}>
+      <ol className="relative space-y-5 border-l border-border pl-6">
+        {STORY_TIMELINE.map((t) => (
+          <li key={t.year} className="relative">
+            <span className="absolute -left-[29px] top-1.5 h-2.5 w-2.5 rounded-full bg-primary" />
+            <p className="text-sm font-semibold">
+              <span className="text-primary">{t.year}</span>
+              <span className="text-muted-foreground"> | </span>
+              <span className="text-brand-ink">{t.title}</span>
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t.desc}</p>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-6 text-sm font-semibold italic text-brand-ink">The journey continues.</p>
+    </Panel>
+  );
+}
+
+function SiteThumbnail({ domain, name }: { domain: string; name: string }) {
+  const sources = [
+    `https://image.thum.io/get/width/800/crop/900/noanimate/https://${domain}/`,
+    `https://api.microlink.io/?url=${encodeURIComponent(`https://${domain}/`)}&screenshot=true&meta=false&embed=screenshot.url`,
+    `https://s.wordpress.com/mshots/v1/${encodeURIComponent(`https://${domain}/`)}?w=800`,
+  ];
+  const [index, setIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const failed = index >= sources.length;
+
+  if (failed) {
+    return (
+      <div className="flex h-full w-full flex-col items-center justify-center gap-1 bg-secondary">
+        <span className="text-lg font-bold text-brand-ink">{name}</span>
+        <span className="text-[11px] text-muted-foreground">Preview unavailable</span>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {!loaded ? <div className="absolute inset-0 animate-pulse bg-secondary" /> : null}
+      <img
+        key={sources[index]}
+        src={sources[index]}
+        alt={`${name} homepage screenshot`}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        onError={() => setIndex((i) => i + 1)}
+        className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+      />
+    </>
+  );
+}
+
 export function LiveSites() {
   return (
     <Panel
