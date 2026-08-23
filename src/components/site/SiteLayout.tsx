@@ -2,35 +2,37 @@ import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
+import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
-      <main className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[320px_1fr]">
+      <div className="border-b border-border bg-card">
+        <nav className="mx-auto max-w-[1500px] px-4 py-4">
+          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+            {NAV.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary [&.active]:text-primary"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      <main className="mx-auto grid max-w-[1500px] gap-6 px-4 py-8 lg:grid-cols-[380px_1fr]">
         <aside className="lg:sticky lg:top-8 lg:self-start">
           <ProfileCard />
         </aside>
-        <div className="space-y-6">
-          <nav className="panel px-6 py-4">
-            <ul className="flex flex-wrap items-center gap-x-8 gap-y-2">
-              {NAV.map((item) => (
-                <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary [&.active]:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          {children}
-        </div>
+        <div className="space-y-6">{children}</div>
       </main>
 
       <footer className="mt-10 border-t border-border bg-card">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 py-8 text-center">
+        <div className="mx-auto flex max-w-[1500px] flex-col items-center gap-2 px-4 py-8 text-center">
           <p className="text-sm font-semibold text-brand-ink">{BRAND.name}</p>
           <p className="text-xs text-muted-foreground">
             {BRAND.tagline} · {BRAND.email}
@@ -46,17 +48,24 @@ function ProfileCard() {
   const [showLanguages, setShowLanguages] = useState(false);
 
   return (
-    <div className="panel p-6 text-center">
-      <div className="relative mx-auto h-28 w-28">
-        <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2">
-          <img src={logo.url} alt="Heseven logo" className="h-full w-full object-contain" />
+    <div className="panel p-6 text-left">
+      <div className="flex items-start justify-between gap-4">
+        <div className="relative h-28 w-28 shrink-0">
+          <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2">
+            <img src={logo.url} alt="Heseven logo" className="h-full w-full object-contain" />
+          </div>
+          <span className="absolute bottom-2 right-2 h-4 w-4 rounded-full border-2 border-card bg-emerald-500" />
         </div>
-        <span className="absolute bottom-2 right-2 h-4 w-4 rounded-full border-2 border-card bg-emerald-500" />
+        <img
+          src={partnerBadge.url}
+          alt="Shopify Select Partner"
+          className="h-16 w-auto shrink-0 object-contain"
+        />
       </div>
 
       <h1 className="mt-4 text-2xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
 
-      <p className="mt-3 flex flex-wrap items-center justify-center gap-x-2 text-xs text-muted-foreground">
+      <p className="mt-3 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground">
         <span className="inline-flex items-center gap-1 text-emerald-600">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
         </span>
