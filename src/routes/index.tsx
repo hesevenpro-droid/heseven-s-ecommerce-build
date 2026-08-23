@@ -33,9 +33,7 @@ function Index() {
 
   return (
     <SiteLayout>
-      <Panel title="About Us">
-        <p className="text-sm leading-relaxed text-muted-foreground">{BRAND.about}</p>
-      </Panel>
+      <OurStory />
 
       <WhyHeseven />
 

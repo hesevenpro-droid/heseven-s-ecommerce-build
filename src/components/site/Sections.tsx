@@ -111,12 +111,12 @@ export function SalesProof() {
 
 export function WhyHeseven() {
   return (
-    <Panel
-      title="Why Heseven?"
-      titleClassName="text-brand-ink"
-      subtitle={WHY_HESEVEN_INTRO}
-    >
-      <div className="grid gap-4 sm:grid-cols-3">
+    <section className="panel p-6 sm:p-8">
+      <h2 className="text-xl font-bold text-brand-ink">
+        Why <span className="text-primary">Heseven</span>?
+      </h2>
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{WHY_HESEVEN_INTRO}</p>
+      <div className="mt-6 grid gap-4 sm:grid-cols-3">
         {WHY_HESEVEN.map((w) => (
           <div key={w.title} className="rounded-xl border border-border p-4">
             <h3 className="text-sm font-semibold text-brand-ink">{w.title}</h3>
@@ -124,7 +124,7 @@ export function WhyHeseven() {
           </div>
         ))}
       </div>
-    </Panel>
+    </section>
   );
 }
 

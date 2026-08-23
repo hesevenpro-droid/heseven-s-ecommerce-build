@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { Panel, Values } from "@/components/site/Sections";
-import { BRAND, MORE_SKILLS, SKILLS } from "@/lib/site-data";
+import { OurStory, Panel, Values, WhyHeseven } from "@/components/site/Sections";
+import { MORE_SKILLS, SKILLS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -28,9 +28,11 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <SiteLayout>
-      <Panel title="About Us">
-        <p className="text-sm leading-relaxed text-muted-foreground">{BRAND.about}</p>
-      </Panel>
+      <OurStory />
+
+      <WhyHeseven />
+
+      <Values />
 
       <Panel title="Skills & Expertise">
         <div className="flex flex-wrap gap-2">
@@ -45,7 +47,6 @@ function About() {
         </div>
       </Panel>
 
-      <Values />
     </SiteLayout>
   );
 }
