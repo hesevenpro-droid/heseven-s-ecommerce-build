@@ -14,7 +14,11 @@ import {
   BRAND,
   LIVE_SITES,
   SALES_PROOF,
+  STORY_INTRO,
+  STORY_TIMELINE,
   VALUES,
+  WHY_HESEVEN,
+  WHY_HESEVEN_INTRO,
 } from "@/lib/site-data";
 
 export function Panel({
