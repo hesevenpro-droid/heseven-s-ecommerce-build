@@ -202,13 +202,8 @@ export function LiveSites() {
             <div className="border-b border-border bg-secondary px-3 py-2 text-[11px] text-muted-foreground">
               {site.domain}
             </div>
-            <div className="aspect-[16/10] w-full overflow-hidden bg-secondary">
-              <img
-                src={`https://image.thum.io/get/width/800/crop/900/https://${site.domain}/`}
-                alt={`${site.name} homepage screenshot`}
-                loading="lazy"
-                className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
-              />
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-secondary">
+              <SiteThumbnail domain={site.domain} name={site.name} />
             </div>
             <div className="p-4">
               <h3 className="text-sm font-semibold text-brand-ink">{site.name}</h3>
