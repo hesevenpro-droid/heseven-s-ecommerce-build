@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { Panel, VideoReviews } from "@/components/site/Sections";
-import { BRAND, CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS, WHY_HESEVEN } from "@/lib/site-data";
+import { OurStory, Panel, VideoReviews, WhyHeseven } from "@/components/site/Sections";
+import { CORE_SERVICES, MORE_SKILLS, NAV, PROCESS, SKILLS } from "@/lib/site-data";
 import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -37,24 +37,7 @@ function Index() {
         <p className="text-sm leading-relaxed text-muted-foreground">{BRAND.about}</p>
       </Panel>
 
-      <Panel title="Skills & Expertise">
-        <div className="flex flex-wrap gap-2">
-          {skills.map((s) => (
-            <span
-              key={s}
-              className="rounded-full bg-secondary px-3.5 py-1.5 text-xs font-medium text-brand-ink"
-            >
-              {s}
-            </span>
-          ))}
-        </div>
-        <button
-          onClick={() => setShowAll((v) => !v)}
-          className="mt-5 rounded-full border border-border px-4 py-2 text-xs font-semibold text-brand-ink transition-colors hover:bg-secondary"
-        >
-          {showAll ? "Show fewer skills" : `Show all ${SKILLS.length + MORE_SKILLS.length} skills`}
-        </button>
-      </Panel>
+      <WhyHeseven />
 
       <VideoReviews />
 
@@ -90,17 +73,6 @@ function Index() {
         </ol>
       </Panel>
 
-      <Panel title="Why Heseven?">
-        <div className="grid gap-3 sm:grid-cols-2">
-          {WHY_HESEVEN.map((w) => (
-            <div key={w.title} className="rounded-xl border border-border p-4">
-              <h3 className="text-sm font-semibold text-brand-ink">{w.title}</h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{w.desc}</p>
-            </div>
-          ))}
-        </div>
-      </Panel>
-
       <Panel title="Explore Heseven">
         <div className="grid gap-3 sm:grid-cols-3">
           {NAV.map((item) => (
@@ -115,6 +87,25 @@ function Index() {
           ))}
         </div>
       </Panel>
+      <Panel title="Skills & Expertise">
+        <div className="flex flex-wrap gap-2">
+          {skills.map((s) => (
+            <span
+              key={s}
+              className="rounded-full bg-secondary px-3.5 py-1.5 text-xs font-medium text-brand-ink"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
+        <button
+          onClick={() => setShowAll((v) => !v)}
+          className="mt-5 rounded-full border border-border px-4 py-2 text-xs font-semibold text-brand-ink transition-colors hover:bg-secondary"
+        >
+          {showAll ? "Show fewer skills" : `Show all ${SKILLS.length + MORE_SKILLS.length} skills`}
+        </button>
+      </Panel>
+
     </SiteLayout>
   );
 }
