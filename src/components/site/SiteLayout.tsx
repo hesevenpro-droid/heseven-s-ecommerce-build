@@ -7,14 +7,14 @@ import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
-      <div className="border-b border-border bg-card">
-        <nav className="mx-auto max-w-[1500px] px-4 py-4">
-          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+      <div className="flex justify-center px-4 py-4">
+        <nav className="rounded-full border border-border bg-card px-3 py-2 shadow-sm">
+          <ul className="flex flex-wrap items-center justify-center gap-1">
             {NAV.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary [&.active]:text-primary"
+                  className="block rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-primary [&.active]:bg-secondary [&.active]:text-primary"
                 >
                   {item.label}
                 </Link>
@@ -63,22 +63,21 @@ function ProfileCard() {
         />
       </div>
 
-      <h1 className="mt-4 text-2xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
+      <h1 className="mt-4 text-3xl font-bold italic leading-snug text-brand-ink">{BRAND.title}</h1>
 
-      <p className="mt-3 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground">
-        <span className="inline-flex items-center gap-1 text-emerald-600">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Online
+      <span className="mt-3 inline-block rounded-full border border-border px-3 py-1 text-xs font-medium text-brand-ink">
+        Service partner
+      </span>
+
+      <p className="mt-3 flex flex-wrap items-center gap-2 text-sm text-brand-ink">
+        <span>
+          <span className="text-amber-500">★</span> <strong>{BRAND.rating}</strong>{" "}
+          <span className="text-muted-foreground">({BRAND.reviewCount})</span>
         </span>
-        <span>•</span>
-        <span className="inline-flex items-center gap-1"><img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="inline-block h-3 w-[18px] rounded-[2px] object-cover align-[-1px]" /> {BRAND.location}</span>
+        <span className="text-border">|</span>
+        <span className="text-muted-foreground">Partner since September 2018</span>
       </p>
 
-      <p className="mt-3 text-sm text-brand-ink">
-        <span className="text-amber-500">★</span> <strong>{BRAND.rating}</strong>{" "}
-        <span className="text-muted-foreground">({BRAND.reviewCount})</span>
-      </p>
-
-      <p className="mt-4 text-sm italic text-muted-foreground">"{BRAND.tagline}"</p>
 
       <dl className="mt-6 space-y-3 text-left text-sm">
         <div>
