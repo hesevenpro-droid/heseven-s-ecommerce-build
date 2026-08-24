@@ -33,11 +33,12 @@ function Index() {
 
   return (
     <SiteLayout>
+      <VideoReviews />
+
       <OurStory />
 
       <WhyHeseven />
 
-      <VideoReviews />
 
 
       <Panel title="Our Services">
