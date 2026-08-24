@@ -59,7 +59,7 @@ function ProfileCard() {
         <img
           src={partnerBadge.url}
           alt="Shopify Select Partner"
-          className="h-16 w-auto shrink-0 object-contain"
+          className="h-9 w-auto shrink-0 object-contain"
         />
       </div>
 
