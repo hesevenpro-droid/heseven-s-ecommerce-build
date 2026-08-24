@@ -54,7 +54,7 @@ function ProfileCard() {
           <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2">
             <img src={logo.url} alt="Heseven logo" className="h-full w-full object-contain" />
           </div>
-          <span className="absolute bottom-2 right-2 h-4 w-4 rounded-full border-2 border-card bg-emerald-500" />
+          
         </div>
         <img
           src={partnerBadge.url}
