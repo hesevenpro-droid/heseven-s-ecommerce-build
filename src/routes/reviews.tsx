@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { CtaPanel, LiveSites, Panel, SalesProof, VideoReviews } from "@/components/site/Sections";
+import { CtaPanel, Panel, VideoReviews } from "@/components/site/Sections";
 import { BRAND, REVIEW_BREAKDOWN, TESTIMONIALS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/reviews")({
@@ -32,9 +32,6 @@ function Reviews() {
     <SiteLayout>
       <VideoReviews />
 
-
-      <SalesProof />
-      <LiveSites />
 
       <Panel
         title={`Rating ${BRAND.rating}(${BRAND.reviewCount})`}
