@@ -7,26 +7,18 @@ import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
-      <div className="flex justify-center px-4 py-4">
-        <nav className="rounded-full border border-border bg-card px-3 py-2 shadow-sm">
-          <ul className="flex flex-wrap items-center justify-center gap-1">
-            {NAV.map((item) => (
-              <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className="block rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-primary [&.active]:bg-secondary [&.active]:text-primary"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      {/* Desktop nav — top centered pill */}
+      <div className="hidden lg:flex justify-center px-4 py-4">
+        <NavPill />
       </div>
 
       <main className="mx-auto grid max-w-[1500px] gap-6 px-4 py-8 lg:grid-cols-[380px_1fr]">
         <aside className="lg:sticky lg:top-8 lg:self-start">
           <ProfileCard />
+          {/* Mobile / tablet nav — below profile card */}
+          <div className="mt-4 lg:hidden flex justify-center">
+            <NavPill />
+          </div>
         </aside>
         <div className="space-y-6">{children}</div>
       </main>
@@ -40,6 +32,25 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         </div>
       </footer>
     </div>
+  );
+}
+
+function NavPill() {
+  return (
+    <nav className="rounded-full border border-border bg-card px-3 py-2 shadow-sm">
+      <ul className="flex flex-wrap items-center justify-center gap-1">
+        {NAV.map((item) => (
+          <li key={item.to}>
+            <Link
+              to={item.to}
+              className="block rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-primary [&.active]:bg-secondary [&.active]:text-primary"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
