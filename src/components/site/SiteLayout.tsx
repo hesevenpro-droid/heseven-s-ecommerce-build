@@ -48,13 +48,12 @@ function ProfileCard() {
   const [showLanguages, setShowLanguages] = useState(false);
 
   return (
-    <div className="panel p-6 text-left">
+    <div className="panel mt-14 p-6 text-left">
       <div className="flex items-start justify-between gap-4">
-        <div className="relative h-28 w-28 shrink-0">
-          <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2">
+        <div className="-mt-20 h-28 w-28 shrink-0">
+          <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2 shadow-sm">
             <img src={logo.url} alt="Heseven logo" className="h-full w-full object-contain" />
           </div>
-          
         </div>
         <img
           src={partnerBadge.url}
