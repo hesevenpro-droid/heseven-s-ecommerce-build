@@ -156,8 +156,8 @@ export const STORY_TIMELINE = [
 
 
 export const NAV = [
-  { label: "Portfolio", to: "/portfolio" },
   { label: "Reviews", to: "/reviews" },
+  { label: "Portfolio", to: "/portfolio" },
   { label: "Services", to: "/services" },
   { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
