@@ -57,6 +57,7 @@ function NavPill() {
 function ProfileCard() {
   const [showLocations, setShowLocations] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
+  const [showIndustries, setShowIndustries] = useState(false);
 
   return (
     <div className="panel mt-14 p-6 text-left">
@@ -124,7 +125,16 @@ function ProfileCard() {
         </div>
         <div>
           <dt className="text-muted-foreground">Industries</dt>
-          <dd className="font-medium text-brand-ink">{INDUSTRIES.join(", ")}</dd>
+          <dd className="font-medium text-brand-ink">
+            {(showIndustries ? INDUSTRIES : INDUSTRIES.slice(0, 3)).join(", ")}
+          </dd>
+          <button
+            type="button"
+            onClick={() => setShowIndustries((v) => !v)}
+            className="mt-1 text-xs font-semibold text-primary hover:underline"
+          >
+            {showIndustries ? "Show less" : `View more (${INDUSTRIES.length - 3})`}
+          </button>
         </div>
         <div>
           <dt className="text-muted-foreground">Average response time</dt>

@@ -12,6 +12,7 @@ import v8 from "@/assets/video-review-8.mp4.asset.json";
 const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
 import {
   BRAND,
+  INDUSTRIES_DETAILS,
   LIVE_SITES,
   SALES_PROOF,
   STORY_INTRO,
