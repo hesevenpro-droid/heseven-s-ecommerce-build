@@ -12,6 +12,7 @@ import v8 from "@/assets/video-review-8.mp4.asset.json";
 const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
 import {
   BRAND,
+  INDUSTRIES_DETAILS,
   LIVE_SITES,
   SALES_PROOF,
   STORY_INTRO,
@@ -53,6 +54,28 @@ export function Values() {
         ))}
       </div>
     </Panel>
+  );
+}
+
+export function IndustriesWeServe() {
+  return (
+    <section className="panel p-6 sm:p-8">
+      <h2 className="text-xl font-bold text-brand-ink">
+        Industries <span className="text-primary">We Serve</span>
+      </h2>
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        We work with brands across a range of industries, delivering tailored eCommerce solutions that
+        combine thoughtful design, seamless functionality, and strategies built to drive growth.
+      </p>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {INDUSTRIES_DETAILS.map((ind) => (
+          <div key={ind.title} className="rounded-xl border border-border p-4">
+            <h3 className="text-sm font-semibold text-brand-ink">{ind.title}</h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{ind.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

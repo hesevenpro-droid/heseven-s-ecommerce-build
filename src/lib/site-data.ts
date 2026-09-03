@@ -47,7 +47,41 @@ export const SUPPORTED_LOCATIONS = [
 
 export const LANGUAGES = ["English", "Spanish", "German", "French", "Italian"];
 
-export const INDUSTRIES = ["Clothing and fashion", "Health and beauty", "Lifestyle"];
+export const INDUSTRIES = [
+  "Fashion & Apparel",
+  "Health & Beauty",
+  "Electronics & Technology",
+  "Food & Beverage",
+  "Home & Lifestyle",
+  "Sports & Outdoor",
+];
+
+export const INDUSTRIES_DETAILS = [
+  {
+    title: "Fashion & Apparel",
+    desc: "From emerging fashion labels to established clothing and streetwear brands, we create visually compelling, conversion-focused stores that showcase your products and turn visitors into customers.",
+  },
+  {
+    title: "Health & Beauty",
+    desc: "We build fast, intuitive eCommerce experiences for skincare, cosmetics, personal care, and wellness brands, making it easy for customers to discover, explore, and purchase your products.",
+  },
+  {
+    title: "Electronics & Technology",
+    desc: "We develop high-performing stores for electronics and technology brands, with seamless integrations, intuitive navigation, secure transactions, and product experiences designed to simplify complex purchasing decisions.",
+  },
+  {
+    title: "Food & Beverage",
+    desc: "We help food and beverage brands build scalable online stores with streamlined ordering, subscription options, flexible fulfilment solutions, and inventory management to support long-term growth.",
+  },
+  {
+    title: "Home & Lifestyle",
+    desc: "From furniture and home décor to lifestyle products, we create immersive, high-converting shopping experiences that showcase your products and reflect the character of your brand.",
+  },
+  {
+    title: "Sports & Outdoor",
+    desc: "We help sports, fitness, and outdoor brands build engaging eCommerce experiences with intuitive product discovery, advanced filtering, compelling visuals, and smooth customer journeys.",
+  },
+];
 
 export const VIDEO_REVIEWS = [1, 2, 3, 4, 5, 6, 7, 8];
 

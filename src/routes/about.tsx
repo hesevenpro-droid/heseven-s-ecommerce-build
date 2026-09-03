@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { OurStory, Panel, Values, WhyHeseven } from "@/components/site/Sections";
+import { IndustriesWeServe, OurStory, Panel, Values, WhyHeseven } from "@/components/site/Sections";
 import { MORE_SKILLS, SKILLS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
@@ -33,6 +33,8 @@ function About() {
       <WhyHeseven />
 
       <Values />
+
+      <IndustriesWeServe />
 
       <Panel title="Skills & Expertise">
         <div className="flex flex-wrap gap-2">
