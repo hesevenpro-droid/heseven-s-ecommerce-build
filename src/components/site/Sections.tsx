@@ -198,7 +198,9 @@ function SiteThumbnail({ domain, name }: { domain: string; name: string }) {
         key={sources[index]}
         src={sources[index]}
         alt={`${name} homepage screenshot`}
-        loading="lazy"
+        loading="eager"
+        fetchPriority={index === 0 ? "high" : "auto"}
+        decoding="async"
         onLoad={() => setLoaded(true)}
         onError={() => setIndex((i) => i + 1)}
         className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
@@ -213,7 +215,7 @@ export function LiveSites() {
       title="Live Client Websites"
       subtitle="Live stores we have built, optimised or scaled. Open any preview to visit the site."
     >
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         {LIVE_SITES.map((site) => (
           <a
             key={site.domain}
