@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CtaPanel, Panel, VideoReviews } from "@/components/site/Sections";
-import { BRAND, REVIEW_BREAKDOWN, TESTIMONIALS } from "@/lib/site-data";
+import { BRAND, REVIEW_BREAKDOWN } from "@/lib/site-data";
+import { CLIENT_REVIEWS } from "@/lib/reviews-data";
 
 export const Route = createFileRoute("/reviews")({
   component: Reviews,
