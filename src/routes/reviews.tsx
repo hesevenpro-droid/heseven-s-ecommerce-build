@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CtaPanel, Panel, VideoReviews } from "@/components/site/Sections";
-import { BRAND, REVIEW_BREAKDOWN, TESTIMONIALS } from "@/lib/site-data";
+import { BRAND, REVIEW_BREAKDOWN } from "@/lib/site-data";
+import { CLIENT_REVIEWS } from "@/lib/reviews-data";
 
 export const Route = createFileRoute("/reviews")({
   component: Reviews,
@@ -25,13 +27,31 @@ export const Route = createFileRoute("/reviews")({
   }),
 });
 
+const PER_PAGE = 10;
+
+function Stars({ value }: { value: number }) {
+  return (
+    <span className="text-amber-500" aria-label={`${value} out of 5`}>
+      {"★".repeat(value)}
+      <span className="text-muted-foreground/40">{"★".repeat(5 - value)}</span>
+    </span>
+  );
+}
+
 function Reviews() {
   const total = REVIEW_BREAKDOWN.reduce((a, b) => a + b.count, 0);
+  const [page, setPage] = useState(1);
+  const pageCount = Math.ceil(CLIENT_REVIEWS.length / PER_PAGE);
+  const items = CLIENT_REVIEWS.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const go = (p: number) => {
+    setPage(Math.min(Math.max(p, 1), pageCount));
+    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <SiteLayout>
       <VideoReviews />
-
 
       <Panel
         title={`Rating ${BRAND.rating}(${BRAND.reviewCount})`}
@@ -55,17 +75,70 @@ function Reviews() {
           ))}
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {TESTIMONIALS.map((t) => (
-            <article key={t.name} className="rounded-xl border border-border p-5">
-              <p className="text-amber-500">★★★★★</p>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">"{t.text}"</p>
-              <p className="mt-4 text-sm font-semibold text-brand-ink">{t.name}</p>
-              <p className="text-xs text-muted-foreground">
-                {t.country} · {t.service}
+        <div className="mt-8 divide-y divide-border border-t border-border">
+          {items.map((r, i) => (
+            <article key={`${r.name}-${r.date}-${i}`} className="py-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-base font-semibold text-brand-ink">{r.name}</h3>
+                <span className="text-xs text-muted-foreground">{r.date}</span>
+              </div>
+
+              <div className="mt-3 space-y-1.5">
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="w-36 text-muted-foreground">Quality of work</span>
+                  <Stars value={r.quality} />
+                  <span className="text-xs text-muted-foreground">{r.quality}</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="w-36 text-muted-foreground">Communication</span>
+                  <Stars value={r.communication} />
+                  <span className="text-xs text-muted-foreground">{r.communication}</span>
+                </div>
+              </div>
+
+              {r.text ? (
+                <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+                  {r.text}
+                </p>
+              ) : null}
+
+              <p className="mt-4 text-xs text-muted-foreground">
+                Service reviewed: <span className="font-medium text-brand-ink">{r.service}</span>
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-6 flex items-center justify-center gap-3 text-sm">
+          <button
+            type="button"
+            onClick={() => go(page - 1)}
+            disabled={page === 1}
+            className="rounded-full border border-border px-4 py-2 text-brand-ink transition disabled:opacity-40 hover:bg-secondary"
+          >
+            Previous
+          </button>
+          <select
+            value={page}
+            onChange={(e) => go(Number(e.target.value))}
+            className="rounded-full border border-border bg-background px-3 py-2 text-brand-ink"
+            aria-label="Page"
+          >
+            {Array.from({ length: pageCount }, (_, i) => i + 1).map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </select>
+          <span className="text-muted-foreground">/ {pageCount}</span>
+          <button
+            type="button"
+            onClick={() => go(page + 1)}
+            disabled={page === pageCount}
+            className="rounded-full border border-border px-4 py-2 text-brand-ink transition disabled:opacity-40 hover:bg-secondary"
+          >
+            Next
+          </button>
         </div>
       </Panel>
 
@@ -73,3 +146,4 @@ function Reviews() {
     </SiteLayout>
   );
 }
+
