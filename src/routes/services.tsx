@@ -39,7 +39,7 @@ function Services() {
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
               <div className="flex-1" />
               <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
-                <span className="text-sm font-bold text-brand-ink">{s.price}</span>
+                <span className="text-sm font-bold text-brand-ink">Pounds {s.price.replace(/[£$]/g, "")}</span>
                 <span className="text-xs font-semibold text-primary">View details →</span>
               </div>
             </article>
