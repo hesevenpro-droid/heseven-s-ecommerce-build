@@ -222,53 +222,74 @@ export const MORE_SKILLS = [
   "Analytics & Tracking",
 ];
 
-export const SERVICES = [
+import storeBuildImg from "@/assets/services/store-build.webp.asset.json";
+import siteSpeedImg from "@/assets/services/site-speed.webp.asset.json";
+import croImg from "@/assets/services/cro.webp.asset.json";
+import themeImg from "@/assets/services/theme-customisation.webp.asset.json";
+import vaImg from "@/assets/services/virtual-assistant.webp.asset.json";
+import migrationImg from "@/assets/services/store-migration.webp.asset.json";
+import googleImg from "@/assets/services/google-ecosystem.webp.asset.json";
+import seoImg from "@/assets/services/seo-geo-aeo.webp.asset.json";
+import smmImg from "@/assets/services/social-media-marketing.webp.asset.json";
+import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json";
+
+export const SERVICES: { title: string; desc: string; price: string; image?: string }[] = [
   {
+    image: storeBuildImg.url,
     title: "Store Build or Redesign",
     desc: "Crafting stunning, user-friendly online stores tailored to your brand. From inception to launch, we ensure a seamless shopping experience. Elevate your digital presence with our expert design and development solutions.",
     price: "£200 - £4,500",
   },
   {
+    image: siteSpeedImg.url,
     title: "Site Performance and Speed",
     desc: "Optimise your page loading speed and performance by removing unused scripts, reducing app bloat, and improving overall site efficiency.",
     price: "£100 - £300",
   },
   {
+    image: croImg.url,
     title: "Conversion Rate Optimisation",
     desc: "Improve your store's conversion rate through data-driven enhancements, better user experience, and strategic optimisations that turn more visitors into customers.",
     price: "£500 - £2,000",
   },
   {
+    image: themeImg.url,
     title: "Theme Customisation",
     desc: "Transform your website with tailored designs and functionality. From branding updates to custom features, we create a unique store experience that fits your vision.",
     price: "£30 - £500",
   },
   {
+    image: vaImg.url,
     title: "Virtual Assistant",
     desc: "Maximise your online presence with our comprehensive website management service. From content updates and security patches to performance optimisation and analytics tracking, we handle the day-to-day tasks so you can focus on growing your business.",
     price: "£300 - £900",
   },
   {
+    image: migrationImg.url,
     title: "Store Migration",
     desc: "Seamlessly migrate your store to Shopify or another platform while preserving products, customers, orders, content, and essential store data. We ensure a smooth transition with minimal disruption to your business.",
     price: "£200 - £1,500",
   },
   {
+    image: googleImg.url,
     title: "Google Ecosystem",
     desc: "Set up and optimise your Google ecosystem, including Google Merchant Center, GA4, Google Business Profile, and YouTube promotion. Improve visibility, tracking, and customer reach across Google platforms.",
     price: "£200 - £1,000",
   },
   {
+    image: seoImg.url,
     title: "SEO, GEO and AEO",
     desc: "Improve your online visibility across traditional search engines, generative AI platforms, and answer engines. We combine SEO, Generative Engine Optimisation (GEO), and Answer Engine Optimisation (AEO) to help your brand appear where customers are searching.",
     price: "£300 - £2,000",
   },
   {
+    image: smmImg.url,
     title: "Social Media Marketing",
     desc: "Grow your brand through targeted marketing campaigns across Instagram, Facebook, Pinterest, and TikTok. We help drive traffic, increase engagement, and attract new customers.",
     price: "£200 - £1,500",
   },
   {
+    image: smmgmtImg.url,
     title: "Social Media Management",
     desc: "Keep your social media active and engaging across Instagram, Facebook, Pinterest, and TikTok. We handle content planning, scheduling, publishing, audience engagement, and ongoing optimisation.",
     price: "£300 - £1,200",

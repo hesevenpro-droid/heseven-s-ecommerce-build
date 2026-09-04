@@ -34,13 +34,24 @@ function Services() {
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {SERVICES.map((s) => (
-            <article key={s.title} className="flex flex-col rounded-xl border border-border p-5">
+            <article key={s.title} className="flex flex-col overflow-hidden rounded-xl border border-border">
+              {s.image && (
+                <img
+                  src={s.image}
+                  alt={`${s.title} illustration`}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[16/10] w-full object-cover"
+                />
+              )}
+              <div className="flex flex-1 flex-col p-5">
               <h3 className="text-sm font-bold text-brand-ink">{s.title}</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
               <div className="flex-1" />
               <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
                 <span className="text-sm font-bold text-brand-ink">{s.price}</span>
                 <span className="text-xs font-semibold text-primary">View details →</span>
+              </div>
               </div>
             </article>
           ))}
