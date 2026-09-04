@@ -37,15 +37,7 @@ function Services() {
             <article key={s.title} className="flex flex-col rounded-xl border border-border p-5">
               <h3 className="text-sm font-bold text-brand-ink">{s.title}</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
-              <p className="mt-3 text-xs text-brand-ink">
-                <span className="text-amber-500">★</span> 5.0{" "}
-                <span className="text-muted-foreground">({s.reviews})</span>
-              </p>
-              <ul className="mt-3 space-y-1 text-xs text-muted-foreground">
-                <li>{s.specialists} specialists available</li>
-                <li>{s.returning} returning clients</li>
-                <li>Offers video consultation</li>
-              </ul>
+              <div className="flex-1" />
               <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
                 <span className="text-sm font-bold text-brand-ink">{s.price}</span>
                 <span className="text-xs font-semibold text-primary">View details →</span>
