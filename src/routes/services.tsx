@@ -52,6 +52,7 @@ function Services() {
                 <span className="text-sm font-bold text-brand-ink">{s.price}</span>
                 <span className="text-xs font-semibold text-primary">View details →</span>
               </div>
+              </div>
             </article>
           ))}
         </div>
