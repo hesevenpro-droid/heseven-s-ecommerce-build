@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { CtaPanel, LiveSites, SalesProof } from "@/components/site/Sections";
+import { CtaPanel, LiveSites } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/portfolio")({
   component: Portfolio,
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/portfolio")({
 function Portfolio() {
   return (
     <SiteLayout>
-      <SalesProof />
+      
       <LiveSites />
       <CtaPanel />
     </SiteLayout>
