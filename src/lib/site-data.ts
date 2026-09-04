@@ -95,7 +95,6 @@ export const CORE_SERVICES = [
     desc: "Smoothly transition from any e-commerce platform to Shopify, preserving your data, design and SEO rankings for uninterrupted sales.",
   },
   {
-    image: croImg.url,
     title: "Conversion Rate Optimisation",
     desc: "Enhance your product pages, checkout process and UX to turn more visitors into customers and boost overall sales performance.",
   },
