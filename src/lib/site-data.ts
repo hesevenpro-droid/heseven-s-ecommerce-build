@@ -222,8 +222,20 @@ export const MORE_SKILLS = [
   "Analytics & Tracking",
 ];
 
-export const SERVICES = [
+import storeBuildImg from "@/assets/services/store-build.webp.asset.json";
+import siteSpeedImg from "@/assets/services/site-speed.webp.asset.json";
+import croImg from "@/assets/services/cro.webp.asset.json";
+import themeImg from "@/assets/services/theme-customisation.webp.asset.json";
+import vaImg from "@/assets/services/virtual-assistant.webp.asset.json";
+import migrationImg from "@/assets/services/store-migration.webp.asset.json";
+import googleImg from "@/assets/services/google-ecosystem.webp.asset.json";
+import seoImg from "@/assets/services/seo-geo-aeo.webp.asset.json";
+import smmImg from "@/assets/services/social-media-marketing.webp.asset.json";
+import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json";
+
+export const SERVICES: { title: string; desc: string; price: string; image?: string }[] = [
   {
+    image: storeBuildImg.url,
     title: "Store Build or Redesign",
     desc: "Crafting stunning, user-friendly online stores tailored to your brand. From inception to launch, we ensure a seamless shopping experience. Elevate your digital presence with our expert design and development solutions.",
     price: "£200 - £4,500",
