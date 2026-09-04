@@ -247,6 +247,7 @@ export const SERVICES: { title: string; desc: string; price: string; image?: str
     price: "£100 - £300",
   },
   {
+    image: croImg.url,
     title: "Conversion Rate Optimisation",
     desc: "Improve your store's conversion rate through data-driven enhancements, better user experience, and strategic optimisations that turn more visitors into customers.",
     price: "£500 - £2,000",
