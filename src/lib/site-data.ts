@@ -232,6 +232,8 @@ import googleImg from "@/assets/services/google-ecosystem.webp.asset.json";
 import seoImg from "@/assets/services/seo-geo-aeo.webp.asset.json";
 import smmImg from "@/assets/services/social-media-marketing.webp.asset.json";
 import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json";
+import emailMarketingImg from "@/assets/services/email-marketing.png.asset.json";
+import errorBugFixingImg from "@/assets/services/error-bug-fixing.png.asset.json";
 
 export const SERVICES: { title: string; desc: string; price: string; image?: string }[] = [
   {
