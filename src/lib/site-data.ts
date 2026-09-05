@@ -232,6 +232,8 @@ import googleImg from "@/assets/services/google-ecosystem.webp.asset.json";
 import seoImg from "@/assets/services/seo-geo-aeo.webp.asset.json";
 import smmImg from "@/assets/services/social-media-marketing.webp.asset.json";
 import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json";
+import emailMarketingImg from "@/assets/services/email-marketing.png.asset.json";
+import errorBugFixingImg from "@/assets/services/error-bug-fixing.png.asset.json";
 
 export const SERVICES: { title: string; desc: string; price: string; image?: string }[] = [
   {
@@ -295,11 +297,13 @@ export const SERVICES: { title: string; desc: string; price: string; image?: str
     price: "£300 - £1,200",
   },
   {
+    image: emailMarketingImg.url,
     title: "Email Marketing & Automation",
     desc: "Build and manage effective email marketing campaigns that engage customers and drive sales. From newsletters and promotional campaigns to automated flows, abandoned cart recovery, welcome sequences, and customer retention, we help turn email into a reliable revenue channel.",
     price: "£200 - £1,500",
   },
   {
+    image: errorBugFixingImg.url,
     title: "Error & Bug Fixing",
     desc: "Identify and resolve website errors, bugs, broken features, layout issues, and functionality problems. We troubleshoot technical issues and ensure your store works smoothly across devices and browsers.",
     price: "£30 - £500",
