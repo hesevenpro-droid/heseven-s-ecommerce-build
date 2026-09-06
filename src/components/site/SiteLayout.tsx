@@ -33,26 +33,37 @@ function Footer() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  const headingClass =
+    "text-xs font-bold uppercase tracking-[0.18em] text-white/90";
+  const linkClass =
+    "text-sm text-white/55 transition-colors hover:text-white";
+  const socialClass =
+    "flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all hover:border-primary hover:bg-primary hover:text-white";
+
   return (
-    <footer className="mt-10 border-t border-border bg-card">
-      <div className="mx-auto max-w-[1500px] px-4 py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="mt-10 bg-[#0b1220] text-white">
+      <div className="h-1 w-full bg-gradient-to-r from-primary/40 via-primary to-primary/40" />
+      <div className="mx-auto max-w-[1500px] px-4 py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-sm font-bold text-brand-ink">Contact Us</h3>
-            <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+            <h3 className={headingClass}>Contact Us</h3>
+            <p className="mt-5 whitespace-pre-line text-sm leading-relaxed text-white/55">
               {BRAND.address}
             </p>
+            <a
+              href={`mailto:${BRAND.email}`}
+              className="mt-4 block text-sm text-white/55 transition-colors hover:text-white"
+            >
+              {BRAND.email}
+            </a>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold text-brand-ink">Menu</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className={headingClass}>Menu</h3>
+            <ul className="mt-5 space-y-2.5">
               {NAV.map((item) => (
                 <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
+                  <Link to={item.to} className={linkClass}>
                     {item.label}
                   </Link>
                 </li>
@@ -61,37 +72,25 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-bold text-brand-ink">Policies</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className={headingClass}>Policies</h3>
+            <ul className="mt-5 space-y-2.5">
               <li>
-                <Link
-                  to="/privacy-policy"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
+                <Link to="/privacy-policy" className={linkClass}>
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/refund-policy"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
+                <Link to="/refund-policy" className={linkClass}>
                   Refund Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/terms-of-service"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
+                <Link to="/terms-of-service" className={linkClass}>
                   Terms Of Service
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/partnership"
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
+                <Link to="/partnership" className={linkClass}>
                   Partnership
                 </Link>
               </li>
@@ -99,44 +98,46 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-bold text-brand-ink">Get Started</h3>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <h3 className={headingClass}>Get Started</h3>
+            <p className="mt-5 text-sm leading-relaxed text-white/55">
               Fill out the form below or email us directly, and our team will get back to you with a
               tailored solution to meet your needs.
             </p>
             <form
-              className="mt-4 space-y-3"
+              className="mt-5"
               onSubmit={(e) => {
                 e.preventDefault();
                 setSubmitted(true);
               }}
             >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
-              />
-              <button
-                type="submit"
-                className="btn-cta w-full rounded-full px-4 py-3 text-sm font-semibold"
-              >
-                Get Started
-              </button>
+              <div className="flex overflow-hidden rounded-full border border-white/15 bg-white/5 focus-within:border-primary">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/40 outline-none"
+                />
+                <button
+                  type="submit"
+                  className="shrink-0 bg-primary px-5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                >
+                  Get Started
+                </button>
+              </div>
             </form>
             {submitted ? (
               <p className="mt-3 text-sm text-primary">Thanks! We will be in touch soon.</p>
             ) : null}
 
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-6 flex items-center gap-3">
               <a
                 href={BRAND.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+                className={socialClass}
               >
                 <Instagram className="h-4 w-4" />
               </a>
@@ -145,7 +146,7 @@ function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+                className={socialClass}
               >
                 <Facebook className="h-4 w-4" />
               </a>
@@ -154,7 +155,7 @@ function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+                className={socialClass}
               >
                 <Linkedin className="h-4 w-4" />
               </a>
@@ -162,8 +163,11 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row">
+          <span>
+            © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+          </span>
+          <span>London, United Kingdom</span>
         </div>
       </div>
     </footer>
