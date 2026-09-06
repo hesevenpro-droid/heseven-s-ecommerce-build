@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to the Heseven team about your Shopify store. WhatsApp, email or send a message, average response time under one hour.",
+          "Talk to the Heseven team about your Shopify store. Send a message, average response time under one hour.",
       },
       { property: "og:title", content: "Contact Heseven: Shopify Agency" },
       {
