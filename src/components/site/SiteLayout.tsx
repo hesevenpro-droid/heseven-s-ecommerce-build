@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
