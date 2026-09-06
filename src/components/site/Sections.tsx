@@ -31,7 +31,7 @@ export function Panel({
   title?: string;
   subtitle?: string;
   titleClassName?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <section className="panel p-6 sm:p-8">

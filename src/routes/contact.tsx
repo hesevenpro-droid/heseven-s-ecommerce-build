@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to the Heseven team about your Shopify store. WhatsApp, email or send a message, average response time under one hour.",
+          "Talk to the Heseven team about your Shopify store. Send a message, average response time under one hour.",
       },
       { property: "og:title", content: "Contact Heseven: Shopify Agency" },
       {
@@ -35,30 +35,7 @@ function Contact() {
         title="We're Here to Help You Succeed"
         titleClassName="text-primary"
         subtitle="Ready to elevate your e-commerce business? Whether you need a new website, a redesign, or custom development services, we're here to assist you. Fill out the form below or email us directly, and our team will get back to you with a tailored solution to meet your needs."
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          <a
-            href={BRAND.whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl border border-border p-5 transition-colors hover:bg-secondary"
-          >
-            <p className="text-xs font-semibold text-muted-foreground">WhatsApp</p>
-            <p className="mt-1 text-sm font-bold text-brand-ink">{BRAND.whatsapp}</p>
-          </a>
-          <a
-            href={`mailto:${BRAND.email}`}
-            className="rounded-xl border border-border p-5 transition-colors hover:bg-secondary"
-          >
-            <p className="text-xs font-semibold text-muted-foreground">Email</p>
-            <p className="mt-1 text-sm font-bold text-brand-ink">{BRAND.email}</p>
-          </a>
-        </div>
-        <div className="mt-4 rounded-xl bg-secondary p-4 text-sm">
-          <span className="text-muted-foreground">Response Time</span>{" "}
-          <strong className="text-brand-ink">{BRAND.responseTime}</strong>
-        </div>
-      </Panel>
+      />
 
       <Panel title="Send Us a Message">
         <form
@@ -92,20 +69,10 @@ function Contact() {
             ) : null}
           </div>
         </form>
-      </Panel>
-
-      <Panel
-        title="Prefer Instant Chat?"
-        subtitle="Connect on WhatsApp for immediate assistance from the team."
-      >
-        <a
-          href={BRAND.whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="btn-cta inline-block rounded-full px-6 py-3 text-sm font-semibold"
-        >
-          Start WhatsApp Chat
-        </a>
+        <div className="mt-4 rounded-xl bg-secondary p-4 text-sm">
+          <span className="text-muted-foreground">Response Time</span>{" "}
+          <strong className="text-brand-ink">{BRAND.responseTime}</strong>
+        </div>
       </Panel>
     </SiteLayout>
   );

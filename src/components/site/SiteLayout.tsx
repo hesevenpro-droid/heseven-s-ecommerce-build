@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
@@ -23,15 +24,149 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="space-y-6">{children}</div>
       </main>
 
-      <footer className="mt-10 border-t border-border bg-card">
-        <div className="mx-auto flex max-w-[1500px] flex-col items-center gap-2 px-4 py-8 text-center">
-          <p className="text-sm font-semibold text-brand-ink">{BRAND.name}</p>
-          <p className="text-xs text-muted-foreground">
-            {BRAND.tagline} · {BRAND.email}
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
+  );
+}
+
+function Footer() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  return (
+    <footer className="mt-10 border-t border-border bg-card">
+      <div className="mx-auto max-w-[1500px] px-4 py-12">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h3 className="text-sm font-bold text-brand-ink">Contact Us</h3>
+            <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+              {BRAND.address}
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-brand-ink">Menu</h3>
+            <ul className="mt-4 space-y-2">
+              {NAV.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-brand-ink">Policies</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link
+                  to="/privacy-policy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/refund-policy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Refund Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms-of-service"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Terms Of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/partnership"
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  Partnership
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold text-brand-ink">Get Started</h3>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Fill out the form below or email us directly, and our team will get back to you with a
+              tailored solution to meet your needs.
+            </p>
+            <form
+              className="mt-4 space-y-3"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
+              />
+              <button
+                type="submit"
+                className="btn-cta w-full rounded-full px-4 py-3 text-sm font-semibold"
+              >
+                Get Started
+              </button>
+            </form>
+            {submitted ? (
+              <p className="mt-3 text-sm text-primary">Thanks! We will be in touch soon.</p>
+            ) : null}
+
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href={BRAND.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href={BRAND.facebookUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+              >
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a
+                href={BRAND.linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 }
 
