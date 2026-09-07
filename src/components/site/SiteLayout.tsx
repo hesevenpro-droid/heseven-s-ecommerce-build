@@ -41,7 +41,7 @@ function Footer() {
     "flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all hover:border-primary hover:bg-primary hover:text-white";
 
   return (
-    <footer className="mt-10 bg-[#0b1220] text-white">
+    <footer className="mt-10 bg-footer text-white">
       <div className="h-1 w-full bg-gradient-to-r from-primary/40 via-primary to-primary/40" />
       <div className="mx-auto max-w-[1500px] px-4 py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

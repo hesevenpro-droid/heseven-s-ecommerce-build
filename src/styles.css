@@ -60,6 +60,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-brand-ink: var(--brand-ink);
+  --color-footer: var(--footer);
   --font-sans: var(--font-sans);
   --shadow-card: var(--shadow-card);
 }
@@ -81,6 +82,7 @@
   --accent: oklch(0.945 0.028 258);
   --accent-foreground: oklch(0.35 0.14 263.5);
   --brand-ink: oklch(0.16 0.02 264);
+  --footer: oklch(0 0 0);
   --gradient-cta: linear-gradient(100deg, oklch(0.42 0.2 263.5), oklch(0.56 0.21 258));
   --shadow-card: 0 1px 2px oklch(0.2 0.05 264 / 0.04), 0 8px 24px -12px oklch(0.2 0.05 264 / 0.12);
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
@@ -137,6 +139,7 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --footer: oklch(0 0 0);
 }
 
 @layer base {
