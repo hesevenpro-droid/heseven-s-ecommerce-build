@@ -93,7 +93,7 @@ function TermsOfService() {
           <h3 className="font-semibold text-brand-ink">Governing law and contact</h3>
           <p>
             These terms are governed by the laws of England and Wales, and the courts of England and Wales
-            have exclusive jurisdiction. Questions may be sent to heseven.pro@gmail.com or 72 Shelton St.,
+            have exclusive jurisdiction. Questions may be sent through our contact page or to 72 Shelton St.,
             London, Greater London, WC2H 9JQ, United Kingdom.
           </p>
         </div>

@@ -53,7 +53,7 @@ function Partnership() {
           </p>
           <h3 className="font-semibold text-brand-ink">Start a conversation</h3>
           <p>
-            Email heseven.pro@gmail.com with an introduction to your business, the type of partnership you
+            Use our contact page to send an introduction to your business, the type of partnership you
             have in mind and any relevant client or project details. Please do not send confidential client
             information until an appropriate agreement is in place.
           </p>

@@ -11,7 +11,6 @@ export const BRAND = {
   responseTime: "Less than 1 hour",
   whatsapp: "+44 7454 744906",
   whatsappUrl: "https://wa.me/447454744906",
-  email: "heseven.pro@gmail.com",
   address: "72 Shelton St. London, Greater London,\nWC2H 9JQ, United Kingdom",
   instagramUrl: "https://instagram.com/heseven.ltd",
   facebookUrl: "https://facebook.com/hesevenltd",
