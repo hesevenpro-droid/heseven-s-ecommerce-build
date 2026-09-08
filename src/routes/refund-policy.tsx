@@ -54,7 +54,7 @@ function RefundPolicy() {
           </p>
           <h3 className="font-semibold text-brand-ink">Requesting a refund</h3>
           <p>
-            Email heseven.pro@gmail.com with your name, project reference, payment date and reason for the
+            Contact us through our contact page with your name, project reference, payment date and reason for the
             request. We will review the project record and respond within 10 business days. Any approved
             refund may take additional time to appear depending on the payment provider.
           </p>

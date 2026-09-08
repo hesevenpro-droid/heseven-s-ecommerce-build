@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { ChatWidget } from "@/components/site/ChatWidget";
 import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
@@ -50,12 +51,12 @@ function Footer() {
             <p className="mt-5 whitespace-pre-line text-sm leading-relaxed text-white/55">
               {BRAND.address}
             </p>
-            <a
-              href={`mailto:${BRAND.email}`}
+            <Link
+              to="/contact"
               className="mt-4 block text-sm text-white/55 transition-colors hover:text-white"
             >
-              {BRAND.email}
-            </a>
+              Send us a message
+            </Link>
           </div>
 
           <div>
@@ -197,6 +198,7 @@ function ProfileCard() {
   const [showLocations, setShowLocations] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [showIndustries, setShowIndustries] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <div className="panel mt-14 p-6 text-left">
@@ -288,14 +290,16 @@ function ProfileCard() {
         >
           Contact Us
         </Link>
-        <a
-          href={BRAND.whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="block rounded-full border border-border bg-card px-4 py-3 text-sm font-semibold text-brand-ink transition-colors hover:bg-secondary"
+        <button
+          type="button"
+          onClick={() => setChatOpen(true)}
+          className="block w-full rounded-full border border-border bg-card px-4 py-3 text-sm font-semibold text-brand-ink transition-colors hover:bg-secondary"
         >
           Send a message
-        </a>
+        </button>
+      </div>
+
+      <ChatWidget open={chatOpen} onClose={() => setChatOpen(false)} />
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ function PrivacyPolicy() {
           <h3 className="font-semibold text-brand-ink">Who we are</h3>
           <p>
             Heseven is an eCommerce agency based at 72 Shelton St., London, Greater London, WC2H 9JQ,
-            United Kingdom. For privacy enquiries, email heseven.pro@gmail.com.
+            United Kingdom. For privacy enquiries, please use our contact page.
           </p>
           <h3 className="font-semibold text-brand-ink">Information we collect</h3>
           <p>
@@ -71,7 +71,7 @@ function PrivacyPolicy() {
             Subject to applicable law, you may request access to, correction or deletion of your information;
             restrict or object to processing; request data portability; or withdraw consent. You may also
             complain to the UK Information Commissioner’s Office. To exercise a right, email
-            heseven.pro@gmail.com. We may need to verify your identity before responding.
+            our contact page. We may need to verify your identity before responding.
           </p>
           <h3 className="font-semibold text-brand-ink">Security and updates</h3>
           <p>
