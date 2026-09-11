@@ -300,7 +300,6 @@ function ProfileCard() {
       </div>
 
       <ChatWidget open={chatOpen} onClose={() => setChatOpen(false)} />
-      </div>
     </div>
   );
 }
