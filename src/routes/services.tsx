@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Panel } from "@/components/site/Sections";
 import { SERVICES, SUCCESS_RATINGS } from "@/lib/site-data";
@@ -34,7 +34,12 @@ function Services() {
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {SERVICES.map((s) => (
-            <article key={s.title} className="flex flex-col overflow-hidden rounded-xl border border-border">
+            <Link
+              key={s.slug}
+              to="/services/$slug"
+              params={{ slug: s.slug }}
+              className="group flex flex-col overflow-hidden rounded-xl border border-border transition-shadow hover:shadow-card"
+            >
               {s.image && (
                 <img
                   src={s.image}
@@ -53,7 +58,7 @@ function Services() {
                 <span className="text-xs font-semibold text-primary">View details →</span>
               </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </Panel>

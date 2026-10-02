@@ -238,7 +238,7 @@ import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json
 import emailMarketingImg from "@/assets/services/email-marketing.png.asset.json";
 import errorBugFixingImg from "@/assets/services/error-bug-fixing.png.asset.json";
 
-export const SERVICES: { title: string; desc: string; price: string; image?: string }[] = [
+const SERVICE_DATA: { title: string; desc: string; price: string; image?: string }[] = [
   {
     image: storeBuildImg.url,
     title: "Store Build or Redesign",
@@ -312,6 +312,14 @@ export const SERVICES: { title: string; desc: string; price: string; image?: str
     price: "£30 - £500",
   },
 ];
+
+export function serviceSlug(title: string) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+export const SERVICES = SERVICE_DATA.map((s) => ({ ...s, slug: serviceSlug(s.title) }));
+
+export const SERVICES_BY_SLUG = Object.fromEntries(SERVICES.map((s) => [s.slug, s]));
 
 export const SUCCESS_RATINGS = [
   { label: "Shopify Development", value: 98 },

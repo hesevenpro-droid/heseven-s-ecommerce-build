@@ -21,6 +21,7 @@ import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 import { Route as AuthenticatedAdminInboxRouteImport } from './routes/_authenticated/admin.inbox'
 
 const IndexRoute = IndexRouteImport.update({
@@ -82,6 +83,11 @@ const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   path: '/terms-of-service',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const AuthenticatedAdminInboxRoute = AuthenticatedAdminInboxRouteImport.update({
   id: '/admin/inbox',
   path: '/admin/inbox',
@@ -98,8 +104,9 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/services/$slug': typeof ServicesSlugRoute
   '/admin/inbox': typeof AuthenticatedAdminInboxRoute
 }
 export interface FileRoutesByTo {
@@ -112,8 +119,9 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/services/$slug': typeof ServicesSlugRoute
   '/admin/inbox': typeof AuthenticatedAdminInboxRoute
 }
 export interface FileRoutesById {
@@ -128,8 +136,9 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/refund-policy': typeof RefundPolicyRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/services/$slug': typeof ServicesSlugRoute
   '/_authenticated/admin/inbox': typeof AuthenticatedAdminInboxRoute
 }
 export interface FileRouteTypes {
@@ -146,6 +155,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/services'
     | '/terms-of-service'
+    | '/services/$slug'
     | '/admin/inbox'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -160,6 +170,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/services'
     | '/terms-of-service'
+    | '/services/$slug'
     | '/admin/inbox'
   id:
     | '__root__'
@@ -175,6 +186,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/services'
     | '/terms-of-service'
+    | '/services/$slug'
     | '/_authenticated/admin/inbox'
   fileRoutesById: FileRoutesById
 }
@@ -189,7 +201,7 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RefundPolicyRoute: typeof RefundPolicyRoute
   ReviewsRoute: typeof ReviewsRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   TermsOfServiceRoute: typeof TermsOfServiceRoute
 }
 
@@ -279,6 +291,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsOfServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/_authenticated/admin/inbox': {
       id: '/_authenticated/admin/inbox'
       path: '/admin/inbox'
@@ -300,6 +319,18 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
+interface ServicesRouteChildren {
+  ServicesSlugRoute: typeof ServicesSlugRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesSlugRoute: ServicesSlugRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
@@ -311,7 +342,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RefundPolicyRoute: RefundPolicyRoute,
   ReviewsRoute: ReviewsRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   TermsOfServiceRoute: TermsOfServiceRoute,
 }
 export const routeTree = rootRouteImport

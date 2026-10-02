@@ -21,7 +21,7 @@ export const Route = createFileRoute("/services/$slug")({
         { title: `${service.title} — Heseven Shopify Services` },
         {
           name: "description",
-          content: `${service.title} from £. ${service.desc}`,
+          content: `${service.desc} From ${service.price}.`,
         },
         { property: "og:title", content: `${service.title} — Heseven Shopify Services` },
         { property: "og:description", content: service.desc },
