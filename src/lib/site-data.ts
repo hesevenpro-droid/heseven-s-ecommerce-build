@@ -1,3 +1,16 @@
+import thumbWuka from "@/assets/clients/wukawear_com.webp";
+import thumbCoyalz from "@/assets/clients/coyalzhaircare_com.webp";
+import thumbPowerlete from "@/assets/clients/powerleteclo_com.webp";
+import thumbLifestyle from "@/assets/clients/lifestylehomecollection_org.webp";
+import thumbWineCaverns from "@/assets/clients/thewinecaverns_co_uk.webp";
+import thumbRetrospec from "@/assets/clients/retrospec_com.webp";
+import thumbBioenex from "@/assets/clients/bioenex_de.webp";
+import thumbDarntough from "@/assets/clients/darntough_com.webp";
+import thumbWaldo from "@/assets/clients/waldowatches_com.webp";
+import thumbVroom from "@/assets/clients/vroomclassics_com.webp";
+import thumbSlick from "@/assets/clients/slickgorilla_co_uk.webp";
+import thumbWater from "@/assets/clients/thewaterboutique_com.webp";
+
 export const BRAND = {
   name: "Heseven",
   title: "heseven",
@@ -337,18 +350,18 @@ export const SALES_PROOF = [
 ];
 
 export const LIVE_SITES = [
-  { name: "Wuka Wear", domain: "www.wukawear.com", desc: "Store development, product SEO and conversion rate optimisation" },
-  { name: "Coyalz Hair Care", domain: "www.coyalzhaircare.com", desc: "Shopify build, theme customisation and launch support" },
-  { name: "Powerlete Clothing", domain: "www.powerleteclo.com", desc: "Paid social creative testing and campaign management" },
-  { name: "Lifestyle Home Collection", domain: "www.lifestylehomecollection.org", desc: "Catalogue setup, merchandising and on-page SEO" },
-  { name: "The Wine Caverns", domain: "www.thewinecaverns.co.uk", desc: "Technical SEO, page speed and Merchant Center feed clean-up" },
-  { name: "Retrospec", domain: "www.retrospec.com", desc: "Conversion rate optimisation and performance tuning" },
-  { name: "Bioenex", domain: "www.bioenex.de", desc: "Store migration, localisation and structured data" },
-  { name: "Darn Tough", domain: "darntough.com", desc: "Technical SEO, structured data and Core Web Vitals work" },
-  { name: "Waldo Watches", domain: "www.waldowatches.com", desc: "Product page SEO and email marketing automation" },
-  { name: "Vroom Classics", domain: "www.vroomclassics.com", desc: "Custom Shopify sections and speed optimisation" },
-  { name: "Slick Gorilla", domain: "www.slickgorilla.co.uk", desc: "Paid social creative testing and campaign management" },
-  { name: "The Water Boutique", domain: "www.thewaterboutique.com", desc: "Store setup, Google Ads and Merchant Center feed" },
+  { name: "Wuka Wear", domain: "www.wukawear.com", desc: "Store development, product SEO and conversion rate optimisation", image: thumbWuka },
+  { name: "Coyalz Hair Care", domain: "www.coyalzhaircare.com", desc: "Shopify build, theme customisation and launch support", image: thumbCoyalz },
+  { name: "Powerlete Clothing", domain: "www.powerleteclo.com", desc: "Paid social creative testing and campaign management", image: thumbPowerlete },
+  { name: "Lifestyle Home Collection", domain: "www.lifestylehomecollection.org", desc: "Catalogue setup, merchandising and on-page SEO", image: thumbLifestyle },
+  { name: "The Wine Caverns", domain: "www.thewinecaverns.co.uk", desc: "Technical SEO, page speed and Merchant Center feed clean-up", image: thumbWineCaverns },
+  { name: "Retrospec", domain: "www.retrospec.com", desc: "Conversion rate optimisation and performance tuning", image: thumbRetrospec },
+  { name: "Bioenex", domain: "www.bioenex.de", desc: "Store migration, localisation and structured data", image: thumbBioenex },
+  { name: "Darn Tough", domain: "darntough.com", desc: "Technical SEO, structured data and Core Web Vitals work", image: thumbDarntough },
+  { name: "Waldo Watches", domain: "www.waldowatches.com", desc: "Product page SEO and email marketing automation", image: thumbWaldo },
+  { name: "Vroom Classics", domain: "www.vroomclassics.com", desc: "Custom Shopify sections and speed optimisation", image: thumbVroom },
+  { name: "Slick Gorilla", domain: "www.slickgorilla.co.uk", desc: "Paid social creative testing and campaign management", image: thumbSlick },
+  { name: "The Water Boutique", domain: "www.thewaterboutique.com", desc: "Store setup, Google Ads and Merchant Center feed", image: thumbWater },
 ];
 
 
