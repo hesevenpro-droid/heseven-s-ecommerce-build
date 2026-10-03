@@ -1,3 +1,16 @@
+import thumbWuka from "@/assets/clients/wukawear_com.webp";
+import thumbCoyalz from "@/assets/clients/coyalzhaircare_com.webp";
+import thumbPowerlete from "@/assets/clients/powerleteclo_com.webp";
+import thumbLifestyle from "@/assets/clients/lifestylehomecollection_org.webp";
+import thumbWineCaverns from "@/assets/clients/thewinecaverns_co_uk.webp";
+import thumbRetrospec from "@/assets/clients/retrospec_com.webp";
+import thumbBioenex from "@/assets/clients/bioenex_de.webp";
+import thumbDarntough from "@/assets/clients/darntough_com.webp";
+import thumbWaldo from "@/assets/clients/waldowatches_com.webp";
+import thumbVroom from "@/assets/clients/vroomclassics_com.webp";
+import thumbSlick from "@/assets/clients/slickgorilla_co_uk.webp";
+import thumbWater from "@/assets/clients/thewaterboutique_com.webp";
+
 export const BRAND = {
   name: "Heseven",
   title: "heseven",
