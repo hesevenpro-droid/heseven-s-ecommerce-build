@@ -172,15 +172,9 @@ export function OurStory() {
   );
 }
 
-function SiteThumbnail({ domain, name }: { domain: string; name: string }) {
-  const sources = [
-    `https://image.thum.io/get/width/800/crop/900/noanimate/https://${domain}/`,
-    `https://api.microlink.io/?url=${encodeURIComponent(`https://${domain}/`)}&screenshot=true&meta=false&embed=screenshot.url`,
-    `https://s.wordpress.com/mshots/v1/${encodeURIComponent(`https://${domain}/`)}?w=800`,
-  ];
-  const [index, setIndex] = useState(0);
+function SiteThumbnail({ domain, name, image }: { domain: string; name: string; image: string }) {
   const [loaded, setLoaded] = useState(false);
-  const failed = index >= sources.length;
+  const [failed, setFailed] = useState(false);
 
   if (failed) {
     return (
@@ -195,14 +189,12 @@ function SiteThumbnail({ domain, name }: { domain: string; name: string }) {
     <>
       {!loaded ? <div className="absolute inset-0 animate-pulse bg-secondary" /> : null}
       <img
-        key={sources[index]}
-        src={sources[index]}
-        alt={`${name} homepage screenshot`}
-        loading="eager"
-        fetchPriority={index === 0 ? "high" : "auto"}
+        src={image}
+        alt={`${name} (${domain}) homepage screenshot`}
+        loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
-        onError={() => setIndex((i) => i + 1)}
+        onError={() => setFailed(true)}
         className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
       />
     </>
@@ -228,7 +220,7 @@ export function LiveSites() {
               {site.domain}
             </div>
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-secondary">
-              <SiteThumbnail domain={site.domain} name={site.name} />
+              <SiteThumbnail domain={site.domain} name={site.name} image={site.image} />
             </div>
             <div className="p-4">
               <h3 className="text-sm font-semibold text-brand-ink">{site.name}</h3>
