@@ -7,6 +7,8 @@ import logo from "@/assets/heseven-logo.jpg.asset.json";
 import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
+  const [chatOpen, setChatOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Desktop nav — top centered pill */}
@@ -16,7 +18,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
       <main className="mx-auto grid max-w-[1500px] gap-6 px-4 py-8 lg:grid-cols-[380px_1fr]">
         <aside className="lg:sticky lg:top-8 lg:self-start">
-          <ProfileCard />
+          <ProfileCard onOpenChat={() => setChatOpen(true)} />
           {/* Mobile / tablet nav — below profile card */}
           <div className="mt-4 lg:hidden flex justify-center">
             <NavPill />
@@ -26,6 +28,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       </main>
 
       <Footer />
+      <ChatWidget open={chatOpen} onClose={() => setChatOpen(false)} />
     </div>
   );
 }
@@ -194,11 +197,10 @@ function NavPill() {
   );
 }
 
-function ProfileCard() {
+function ProfileCard({ onOpenChat }: { onOpenChat: () => void }) {
   const [showLocations, setShowLocations] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [showIndustries, setShowIndustries] = useState(false);
-  const [chatOpen, setChatOpen] = useState(false);
 
   return (
     <div className="panel mt-14 p-6 text-left">
@@ -292,14 +294,13 @@ function ProfileCard() {
         </Link>
         <button
           type="button"
-          onClick={() => setChatOpen(true)}
+          onClick={onOpenChat}
           className="block w-full rounded-full border border-border bg-card px-4 py-3 text-sm font-semibold text-brand-ink transition-colors hover:bg-secondary"
         >
           Send a message
         </button>
       </div>
 
-      <ChatWidget open={chatOpen} onClose={() => setChatOpen(false)} />
     </div>
   );
 }
