@@ -55,6 +55,10 @@ export function ChatWidget({ open, onOpen, onClose }: { open: boolean; onOpen: (
     if (!open || typeof window === "undefined") return;
     const visualViewport = window.visualViewport;
     const updateViewport = () => {
+      if (window.innerWidth >= 1024) {
+        setViewport({ height: 0, top: 0 });
+        return;
+      }
       setViewport({
         height: visualViewport?.height ?? window.innerHeight,
         top: visualViewport?.offsetTop ?? 0,
@@ -63,9 +67,11 @@ export function ChatWidget({ open, onOpen, onClose }: { open: boolean; onOpen: (
     updateViewport();
     visualViewport?.addEventListener("resize", updateViewport);
     visualViewport?.addEventListener("scroll", updateViewport);
+    window.addEventListener("resize", updateViewport);
     return () => {
       visualViewport?.removeEventListener("resize", updateViewport);
       visualViewport?.removeEventListener("scroll", updateViewport);
+      window.removeEventListener("resize", updateViewport);
     };
   }, [open]);
 
