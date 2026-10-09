@@ -28,7 +28,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       </main>
 
       <Footer />
-      <ChatWidget open={chatOpen} onClose={() => setChatOpen(false)} />
+      <ChatWidget open={chatOpen} onOpen={() => setChatOpen(true)} onClose={() => setChatOpen(false)} />
     </div>
   );
 }
