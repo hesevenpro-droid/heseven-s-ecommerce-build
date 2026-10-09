@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 
 const TOKEN_KEY = "heseven_chat_token";
 
-export function ChatWidget({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function ChatWidget({ open, onOpen, onClose }: { open: boolean; onOpen: () => void; onClose: () => void }) {
   const start = useServerFn(startChat);
   const send = useServerFn(sendVisitorMessage);
   const fetchMessages = useServerFn(getVisitorMessages);
@@ -116,7 +116,7 @@ export function ChatWidget({ open, onClose }: { open: boolean; onClose: () => vo
       {!open ? (
         <Button
           type="button"
-          onClick={() => window.dispatchEvent(new CustomEvent("heseven:open-chat"))}
+          onClick={onOpen}
           className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-40 flex h-12 items-center gap-2 rounded-full px-5 shadow-lg lg:hidden"
           aria-label="Open chat with Heseven. We are online."
         >
