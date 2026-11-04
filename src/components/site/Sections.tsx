@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assetUrl } from "@/lib/asset-url";
 import { cn } from "@/lib/utils";
 import v1 from "@/assets/video-review-1.mp4.asset.json";
 import v2 from "@/assets/video-review-2.mp4.asset.json";
@@ -90,7 +91,7 @@ export function VideoReviews() {
         {VIDEO_ASSETS.map((v, i) => (
           <video
             key={i}
-            src={v.url}
+            src={assetUrl(v.url)}
             controls
             playsInline
             preload="metadata"

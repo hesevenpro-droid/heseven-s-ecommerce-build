@@ -5,6 +5,7 @@ import { ChatWidget } from "@/components/site/ChatWidget";
 import { BRAND, INDUSTRIES, LANGUAGES, NAV, SUPPORTED_LOCATIONS } from "@/lib/site-data";
 import logo from "@/assets/heseven-logo.jpg.asset.json";
 import partnerBadge from "@/assets/shopify-select-partner.webp.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [chatOpen, setChatOpen] = useState(false);
@@ -207,11 +208,11 @@ function ProfileCard({ onOpenChat }: { onOpenChat: () => void }) {
       <div className="flex items-start justify-between gap-4">
         <div className="-mt-20 h-28 w-28 shrink-0">
           <div className="h-28 w-28 overflow-hidden rounded-full border border-border bg-card p-2 shadow-sm">
-            <img src={logo.url} alt="Heseven logo" className="h-full w-full object-contain" />
+            <img src={assetUrl(logo.url)} alt="Heseven logo" className="h-full w-full object-contain" />
           </div>
         </div>
         <img
-          src={partnerBadge.url}
+          src={assetUrl(partnerBadge.url)}
           alt="Shopify Select Partner"
           className="h-10 w-auto shrink-0 object-contain"
         />
