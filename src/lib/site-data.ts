@@ -250,76 +250,77 @@ import smmImg from "@/assets/services/social-media-marketing.webp.asset.json";
 import smmgmtImg from "@/assets/services/social-media-management.webp.asset.json";
 import emailMarketingImg from "@/assets/services/email-marketing.png.asset.json";
 import errorBugFixingImg from "@/assets/services/error-bug-fixing.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 const SERVICE_DATA: { title: string; desc: string; price: string; image?: string }[] = [
   {
-    image: storeBuildImg.url,
+    image: assetUrl(storeBuildImg.url),
     title: "Store Build or Redesign",
     desc: "Crafting stunning, user-friendly online stores tailored to your brand. From inception to launch, we ensure a seamless shopping experience. Elevate your digital presence with our expert design and development solutions.",
     price: "£200 - £4,500",
   },
   {
-    image: siteSpeedImg.url,
+    image: assetUrl(siteSpeedImg.url),
     title: "Site Performance and Speed",
     desc: "Optimise your page loading speed and performance by removing unused scripts, reducing app bloat, and improving overall site efficiency.",
     price: "£100 - £300",
   },
   {
-    image: croImg.url,
+    image: assetUrl(croImg.url),
     title: "Conversion Rate Optimisation",
     desc: "Improve your store's conversion rate through data-driven enhancements, better user experience, and strategic optimisations that turn more visitors into customers.",
     price: "£500 - £2,000",
   },
   {
-    image: themeImg.url,
+    image: assetUrl(themeImg.url),
     title: "Theme Customisation",
     desc: "Transform your website with tailored designs and functionality. From branding updates to custom features, we create a unique store experience that fits your vision.",
     price: "£30 - £500",
   },
   {
-    image: vaImg.url,
+    image: assetUrl(vaImg.url),
     title: "Virtual Assistant",
     desc: "Maximise your online presence with our comprehensive website management service. From content updates and security patches to performance optimisation and analytics tracking, we handle the day-to-day tasks so you can focus on growing your business.",
     price: "£300 - £900",
   },
   {
-    image: migrationImg.url,
+    image: assetUrl(migrationImg.url),
     title: "Store Migration",
     desc: "Seamlessly migrate your store to Shopify or another platform while preserving products, customers, orders, content, and essential store data. We ensure a smooth transition with minimal disruption to your business.",
     price: "£200 - £1,500",
   },
   {
-    image: googleImg.url,
+    image: assetUrl(googleImg.url),
     title: "Google Ecosystem",
     desc: "Set up and optimise your Google ecosystem, including Google Merchant Center, GA4, Google Business Profile, and YouTube promotion. Improve visibility, tracking, and customer reach across Google platforms.",
     price: "£200 - £1,000",
   },
   {
-    image: seoImg.url,
+    image: assetUrl(seoImg.url),
     title: "SEO, GEO and AEO",
     desc: "Improve your online visibility across traditional search engines, generative AI platforms, and answer engines. We combine SEO, Generative Engine Optimisation (GEO), and Answer Engine Optimisation (AEO) to help your brand appear where customers are searching.",
     price: "£300 - £2,000",
   },
   {
-    image: smmImg.url,
+    image: assetUrl(smmImg.url),
     title: "Social Media Marketing",
     desc: "Grow your brand through targeted marketing campaigns across Instagram, Facebook, Pinterest, and TikTok. We help drive traffic, increase engagement, and attract new customers.",
     price: "£200 - £1,500",
   },
   {
-    image: smmgmtImg.url,
+    image: assetUrl(smmgmtImg.url),
     title: "Social Media Management",
     desc: "Keep your social media active and engaging across Instagram, Facebook, Pinterest, and TikTok. We handle content planning, scheduling, publishing, audience engagement, and ongoing optimisation.",
     price: "£300 - £1,200",
   },
   {
-    image: emailMarketingImg.url,
+    image: assetUrl(emailMarketingImg.url),
     title: "Email Marketing & Automation",
     desc: "Build and manage effective email marketing campaigns that engage customers and drive sales. From newsletters and promotional campaigns to automated flows, abandoned cart recovery, welcome sequences, and customer retention, we help turn email into a reliable revenue channel.",
     price: "£200 - £1,500",
   },
   {
-    image: errorBugFixingImg.url,
+    image: assetUrl(errorBugFixingImg.url),
     title: "Error & Bug Fixing",
     desc: "Identify and resolve website errors, bugs, broken features, layout issues, and functionality problems. We troubleshoot technical issues and ensure your store works smoothly across devices and browsers.",
     price: "£30 - £500",
