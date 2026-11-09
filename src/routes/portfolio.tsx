@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { CtaPanel, LiveSites } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/portfolio")({
+  staticData: { sitemap: true },
   component: Portfolio,
   head: () => ({
     meta: [
@@ -18,9 +19,9 @@ export const Route = createFileRoute("/portfolio")({
         content: "Live client Shopify stores built and optimised by the Heseven team.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/portfolio" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/portfolio" },
     ],
-    links: [{ rel: "canonical", href: "/portfolio" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/portfolio" }],
   }),
 });
 

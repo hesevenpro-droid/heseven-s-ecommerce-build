@@ -94,7 +94,7 @@ export function VideoReviews() {
             src={assetUrl(v.url)}
             controls
             playsInline
-            preload="metadata"
+            preload="none"
             className="aspect-[9/16] w-full rounded-xl border border-border bg-black object-cover"
           />
         ))}

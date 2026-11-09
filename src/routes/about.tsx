@@ -4,6 +4,7 @@ import { IndustriesWeServe, OurStory, Panel, Values, WhyHeseven } from "@/compon
 import { MORE_SKILLS, SKILLS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   component: About,
   head: () => ({
     meta: [
@@ -19,9 +20,9 @@ export const Route = createFileRoute("/about")({
         content: "Who we are and how our Shopify agency helps brands grow after launch day.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/about" }],
   }),
 });
 
