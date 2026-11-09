@@ -5,6 +5,7 @@ import { Panel } from "@/components/site/Sections";
 import { BRAND } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
+  staticData: { sitemap: true },
   component: Contact,
   head: () => ({
     meta: [
@@ -20,9 +21,9 @@ export const Route = createFileRoute("/contact")({
         content: "Get in touch with the Heseven team about your store build, SEO or ads.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/contact" }],
   }),
 });
 

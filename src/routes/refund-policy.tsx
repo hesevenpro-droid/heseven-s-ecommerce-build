@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Panel } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/refund-policy")({
+  staticData: { sitemap: true },
   component: RefundPolicy,
   head: () => ({
     meta: [
@@ -11,9 +12,9 @@ export const Route = createFileRoute("/refund-policy")({
       { property: "og:title", content: "Refund Policy | Heseven" },
       { property: "og:description", content: "Heseven cancellation, refund and project payment policy." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/refund-policy" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/refund-policy" },
     ],
-    links: [{ rel: "canonical", href: "/refund-policy" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/refund-policy" }],
   }),
 });
 

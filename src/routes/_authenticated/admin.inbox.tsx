@@ -11,6 +11,7 @@ import {
 } from "@/lib/chat.functions";
 
 export const Route = createFileRoute("/_authenticated/admin/inbox")({
+  staticData: { sitemap: false },
   component: Inbox,
   head: () => ({
     meta: [

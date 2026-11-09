@@ -4,6 +4,7 @@ import { Panel } from "@/components/site/Sections";
 import { SERVICES, SUCCESS_RATINGS } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/")({
+  staticData: { sitemap: true },
   component: Services,
   head: () => ({
     meta: [
@@ -19,9 +20,9 @@ export const Route = createFileRoute("/services/")({
         content: "End-to-end Shopify solutions built to help your brand grow in a competitive eCommerce market.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/services" }],
   }),
 });
 

@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Panel } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/privacy-policy")({
+  staticData: { sitemap: true },
   component: PrivacyPolicy,
   head: () => ({
     meta: [
@@ -11,9 +12,9 @@ export const Route = createFileRoute("/privacy-policy")({
       { property: "og:title", content: "Privacy Policy | Heseven" },
       { property: "og:description", content: "How Heseven collects, uses, stores and protects your personal information." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/privacy-policy" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/privacy-policy" },
     ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/privacy-policy" }],
   }),
 });
 

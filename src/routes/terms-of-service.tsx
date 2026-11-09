@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Panel } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/terms-of-service")({
+  staticData: { sitemap: true },
   component: TermsOfService,
   head: () => ({
     meta: [
@@ -11,9 +12,9 @@ export const Route = createFileRoute("/terms-of-service")({
       { property: "og:title", content: "Terms of Service | Heseven" },
       { property: "og:description", content: "Terms governing use of Heseven's website and eCommerce agency services." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/terms-of-service" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/terms-of-service" },
     ],
-    links: [{ rel: "canonical", href: "/terms-of-service" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/terms-of-service" }],
   }),
 });
 

@@ -4,6 +4,7 @@ import { Panel } from "@/components/site/Sections";
 import { BRAND, SERVICES, SERVICES_BY_SLUG } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/$slug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const service = SERVICES_BY_SLUG[params.slug];
     if (!service) throw notFound();
@@ -26,9 +27,34 @@ export const Route = createFileRoute("/services/$slug")({
         { property: "og:title", content: `${service.title} — Heseven Shopify Services` },
         { property: "og:description", content: service.desc },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: `/services/${loaderData.service.slug}` },
+          {
+            property: "og:url",
+            content: `https://heseven-growth-hub.lovable.app/services/${service.slug}`,
+          },
       ],
-      links: [{ rel: "canonical", href: `/services/${loaderData.service.slug}` }],
+        links: [
+          {
+            rel: "canonical",
+            href: `https://heseven-growth-hub.lovable.app/services/${service.slug}`,
+          },
+        ],
+        scripts: [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: service.title,
+              description: service.desc,
+              provider: {
+                "@type": "Organization",
+                name: "Heseven",
+                url: "https://heseven-growth-hub.lovable.app/",
+              },
+              url: `https://heseven-growth-hub.lovable.app/services/${service.slug}`,
+            }),
+          },
+        ],
     };
   },
   component: ServiceDetail,
@@ -53,6 +79,7 @@ function ServiceDetail() {
           <img
             src={service.image}
             alt={`${service.title} illustration`}
+            decoding="async"
             className="aspect-[21/9] w-full object-cover"
           />
         ) : null}

@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Panel } from "@/components/site/Sections";
 
 export const Route = createFileRoute("/partnership")({
+  staticData: { sitemap: true },
   component: Partnership,
   head: () => ({
     meta: [
@@ -11,9 +12,9 @@ export const Route = createFileRoute("/partnership")({
       { property: "og:title", content: "Partnership | Heseven" },
       { property: "og:description", content: "Partner with Heseven on referrals, white-label delivery and technology collaborations." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/partnership" },
+      { property: "og:url", content: "https://heseven-growth-hub.lovable.app/partnership" },
     ],
-    links: [{ rel: "canonical", href: "/partnership" }],
+    links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/partnership" }],
   }),
 });
 
