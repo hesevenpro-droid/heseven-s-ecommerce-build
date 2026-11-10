@@ -88,6 +88,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "Heseven",
+              url: "https://heseven-growth-hub.lovable.app/",
+              description:
+                "Shopify store design, development, optimisation, and ecommerce growth services.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "72 Shelton St.",
+                addressLocality: "London",
+                addressRegion: "Greater London",
+                postalCode: "WC2H 9JQ",
+                addressCountry: "GB",
+              },
+              sameAs: ["https://instagram.com/heseven.ltd", "https://facebook.com/hesevenltd"],
+            },
+            {
+              "@type": "WebSite",
+              name: "Heseven",
+              url: "https://heseven-growth-hub.lovable.app/",
+            },
+          ],
+        }),
+      },
+    ],
     links: [
       {
         rel: "stylesheet",
