@@ -26,28 +26,6 @@ export const Route = createFileRoute("/reviews")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://heseven-growth-hub.lovable.app/reviews" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: BRAND.name,
-          url: "https://heseven-growth-hub.lovable.app/",
-          description:
-            "Shopify store design, development, optimisation, and ecommerce growth services.",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "72 Shelton St.",
-            addressLocality: "London",
-            addressRegion: "Greater London",
-            postalCode: "WC2H 9JQ",
-            addressCountry: "GB",
-          },
-          sameAs: [BRAND.instagramUrl, BRAND.facebookUrl],
-        }),
-      },
-    ],
   }),
 });
 
