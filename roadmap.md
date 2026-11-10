@@ -4,4 +4,4 @@
 - [x] Capture real homepage screenshots of the 12 live client sites and host them locally
 - [ ] Verify full site displays with no errors on desktop and mobile (portfolio thumbnails, all routes)
 - [x] Open the Reviews page when visitors first land on the site
-- [ ] Improve page speed, Google discovery, and answer-engine clarity (sitemap, structured data, and deferred review video loading)
+- [x] Improve page speed, Google discovery, and answer-engine clarity (sitemap, structured data, and deferred review video loading)
