@@ -18,8 +18,16 @@ import p6 from "@/assets/video-review-6-poster.jpg.asset.json";
 import p7 from "@/assets/video-review-7-poster.jpg.asset.json";
 import p8 from "@/assets/video-review-8-poster.jpg.asset.json";
 
-const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
-const VIDEO_POSTERS = [p1, p2, p3, p4, p5, p6, p7, p8];
+const VIDEO_ASSETS = [
+  { video: v1, poster: p1 },
+  { video: v2, poster: p2 },
+  { video: v3, poster: p3 },
+  { video: v4, poster: p4 },
+  { video: v5, poster: p5 },
+  { video: v6, poster: p6 },
+  { video: v7, poster: p7 },
+  { video: v8, poster: p8 },
+];
 import {
   BRAND,
   INDUSTRIES_DETAILS,
@@ -97,11 +105,11 @@ export function VideoReviews() {
       subtitle="Shopify and ecommerce store owners talking about sales growth, in their own words."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {VIDEO_ASSETS.map((v, i) => (
+        {VIDEO_ASSETS.map(({ video, poster }, i) => (
           <video
             key={i}
-            src={assetUrl(v.url)}
-            poster={assetUrl(VIDEO_POSTERS[i].url)}
+            src={assetUrl(video.url)}
+            poster={assetUrl(poster.url)}
             controls
             playsInline
             preload="none"
