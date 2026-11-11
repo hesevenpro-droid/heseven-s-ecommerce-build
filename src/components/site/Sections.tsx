@@ -9,8 +9,17 @@ import v5 from "@/assets/video-review-5.mp4.asset.json";
 import v6 from "@/assets/video-review-6.mp4.asset.json";
 import v7 from "@/assets/video-review-7.mp4.asset.json";
 import v8 from "@/assets/video-review-8.mp4.asset.json";
+import p1 from "@/assets/video-review-1-poster.jpg.asset.json";
+import p2 from "@/assets/video-review-2-poster.jpg.asset.json";
+import p3 from "@/assets/video-review-3-poster.jpg.asset.json";
+import p4 from "@/assets/video-review-4-poster.jpg.asset.json";
+import p5 from "@/assets/video-review-5-poster.jpg.asset.json";
+import p6 from "@/assets/video-review-6-poster.jpg.asset.json";
+import p7 from "@/assets/video-review-7-poster.jpg.asset.json";
+import p8 from "@/assets/video-review-8-poster.jpg.asset.json";
 
 const VIDEO_ASSETS = [v1, v2, v3, v4, v5, v6, v7, v8];
+const VIDEO_POSTERS = [p1, p2, p3, p4, p5, p6, p7, p8];
 import {
   BRAND,
   INDUSTRIES_DETAILS,
@@ -92,6 +101,7 @@ export function VideoReviews() {
           <video
             key={i}
             src={assetUrl(v.url)}
+            poster={assetUrl(VIDEO_POSTERS[i].url)}
             controls
             playsInline
             preload="none"
